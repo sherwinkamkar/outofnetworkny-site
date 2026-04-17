@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You | OutOfNetworkNY</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{--white:#FFFFFF;--steel:#1B4F72;--steel-mid:#2E86AB;--steel-light:#EBF4F8;--charcoal:#0F1923;--gray-mid:#6B7280;--border:#D9E6EE;--serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--radius:4px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--sans);background:var(--steel-light);min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;}
+nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;}
+.nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;height:68px;}
+.nav-logo{font-family:var(--serif);font-size:1.2rem;color:var(--steel);text-decoration:none;}
+.nav-logo span{color:var(--steel-mid);}
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:48px 24px;}
+.card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:56px 48px;max-width:560px;width:100%;text-align:center;box-shadow:0 8px 40px rgba(27,79,114,0.1);}
+.check-circle{width:72px;height:72px;background:var(--steel-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:1.8rem;}
+h1{font-family:var(--serif);font-size:2rem;color:var(--charcoal);letter-spacing:-0.02em;margin-bottom:12px;line-height:1.2;}
+.sub{font-size:1rem;color:var(--gray-mid);line-height:1.7;margin-bottom:32px;}
+.next-steps{background:#F8FAFB;border-radius:8px;padding:24px;margin-bottom:28px;text-align:left;}
+.next-steps h3{font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--steel-mid);margin-bottom:14px;}
+.next-list{list-style:none;}
+.next-list li{display:flex;gap:10px;font-size:0.875rem;color:var(--charcoal);padding:7px 0;border-bottom:1px solid var(--border);}
+.next-list li:last-child{border-bottom:none;}
+.next-num{font-weight:700;color:var(--steel-mid);flex-shrink:0;}
+.actions{display:flex;flex-direction:column;gap:10px;}
+.btn{display:block;padding:13px 24px;border-radius:var(--radius);font-family:var(--sans);font-size:0.9rem;font-weight:600;text-decoration:none;transition:background 0.2s;}
+.btn-primary{background:var(--steel);color:var(--white);}
+.btn-primary:hover{background:var(--charcoal);}
+.btn-secondary{background:transparent;color:var(--steel);border:1px solid var(--border);}
+.btn-secondary:hover{background:var(--steel-light);}
+.contact-line{font-size:0.82rem;color:var(--gray-mid);margin-top:20px;}
+.contact-line a{color:var(--steel-mid);text-decoration:none;}
+footer{background:var(--charcoal);padding:20px 24px;}
+.footer-legal{max-width:1180px;margin:0 auto;font-size:0.7rem;color:rgba(255,255,255,0.3);text-align:center;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">OutOfNetwork<span>NY</span></a>
+  </div>
+</nav>
+<div class="main">
+  <div class="card" id="thankCard">
+    <div class="check-circle">✓</div>
+    <h1 id="thankTitle">We Received Your Request</h1>
+    <p class="sub" id="thankSub">Thank you for reaching out to Madison Law Firm PLLC. A member of our team will be in touch within one business day.</p>
+    <div class="next-steps" id="nextSteps">
+      <h3>What Happens Next</h3>
+      <ul class="next-list">
+        <li><span class="next-num">1</span><span>An attorney or case coordinator will call or email you within 1 business day</span></li>
+        <li><span class="next-num">2</span><span>We'll review your claims and identify NY IDR and federal NSA eligibility</span></li>
+        <li><span class="next-num">3</span><span>You'll receive a clear picture of what's potentially recoverable — at no cost</span></li>
+      </ul>
+    </div>
+    <div class="actions">
+      <a href="/how-it-works.html" class="btn btn-primary">Read the Process Guide →</a>
+      <a href="/free-guide.html" class="btn btn-secondary">Also Download the Free OON Guide</a>
+    </div>
+    <p class="contact-line">Questions? Call us at <a href="tel:2123003191">(212) 300-3191</a> or email <a href="mailto:intake@madisonlawfirm.com">intake@madisonlawfirm.com</a></p>
+  </div>
+</div>
+<footer>
+  <p class="footer-legal">Madison Law Firm PLLC · 579 Fifth Avenue, 2nd Floor, New York, NY 10017 · Attorney advertising · Prior results do not guarantee similar outcomes · © 2026</p>
+</footer>
+<script>
+const params=new URLSearchParams(window.location.search);
+const type=params.get('type');
+if(type==='guide'){
+  document.getElementById('thankTitle').textContent='Your Guide Is On Its Way';
+  document.getElementById('thankSub').textContent='Check your inbox in the next few minutes for The Out-of-Network Provider\'s Arbitration Readiness Guide. While you wait, explore the resources below.';
+  document.getElementById('nextSteps').style.display='none';
+  document.querySelector('.actions').innerHTML='<a href="/how-it-works.html" class="btn btn-primary">Read the Process Guide →</a><a href="/case-evaluator.html" class="btn btn-secondary">Start Your Free Case Evaluation</a>';
+}
+</script>
+</body>
+</html>
