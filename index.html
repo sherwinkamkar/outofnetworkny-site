@@ -63,9 +63,11 @@ nav {
   text-decoration: none;
   letter-spacing: -0.01em;
   line-height: 1.1;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  align-items: flex-start;
 }
+.nav-logo-text { display: inline; }
 .nav-logo span { color: var(--steel-mid); }
 .nav-logo-sub { font-family: var(--sans); font-size: 0.6rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-mid); margin-top: 1px; }
 .nav-logo-sub { font-family: var(--sans); font-size: 0.6rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-mid); margin-top: 1px; }
@@ -559,7 +561,7 @@ footer {
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo">OutOfNetwork<span>NY</span><span class="nav-logo-sub">by Madison Law Firm PLLC</span></a>
+    <a href="/" class="nav-logo"><span class="nav-logo-text">OutOfNetwork<span>NY</span></span><span class="nav-logo-sub">by Madison Law Firm PLLC</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="/for-providers.html">For Providers</a></li>
       <li><a href="/how-it-works.html">How It Works</a></li>
