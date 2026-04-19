@@ -99,4 +99,698 @@ section{padding:88px 24px;}
 .erisa-section .section-sub{color:rgba(255,255,255,0.6);}
 .erisa-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px;}
 .erisa-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:28px;}
-.erisa-card h3{font-family:var(--serif);font-size:1.1rem;colo
+.erisa-card h3{font-family:var(--serif);font-size:1.1rem;color:var(--white);margin-bottom:10px;}
+.erisa-card p{font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.65;}
+.erisa-highlight{color:var(--steel-mid);font-weight:600;}
+
+/* AGED CLAIMS SECTION */
+.aged-section{background:var(--steel-xlight);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.aged-inner{display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:center;}
+.aged-steps{display:flex;flex-direction:column;gap:0;margin-top:32px;}
+.aged-step{display:flex;gap:20px;padding-bottom:28px;position:relative;}
+.aged-step::before{content:'';position:absolute;left:18px;top:36px;bottom:0;width:1px;background:var(--border);}
+.aged-step:last-child::before{display:none;}
+.aged-num{width:36px;height:36px;border-radius:50%;background:var(--steel);color:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:0.9rem;flex-shrink:0;position:relative;z-index:2;}
+.aged-body h4{font-family:var(--serif);font-size:1rem;color:var(--charcoal);margin-bottom:6px;padding-top:6px;}
+.aged-body p{font-size:0.875rem;color:var(--gray-mid);line-height:1.6;}
+.aged-cta-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:32px;box-shadow:var(--shadow);}
+.aged-cta-card h3{font-family:var(--serif);font-size:1.3rem;color:var(--charcoal);margin-bottom:8px;}
+.aged-cta-card p{font-size:0.875rem;color:var(--gray-mid);margin-bottom:24px;line-height:1.6;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--steel-mid);color:var(--white);padding:13px 24px;border-radius:var(--radius);font-weight:600;font-size:0.9rem;text-decoration:none;transition:background 0.2s;border:none;cursor:pointer;width:100%;justify-content:center;}
+.btn-primary:hover{background:#2278A3;}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--steel);padding:12px 24px;border-radius:var(--radius);font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.2s;border:1px solid var(--border);width:100%;justify-content:center;margin-top:10px;}
+.btn-secondary:hover{background:var(--steel-light);}
+
+/* CTA SECTION */
+.cta-section{background:linear-gradient(135deg,var(--charcoal) 0%,var(--steel) 100%);padding:88px 24px;text-align:center;}
+.cta-section h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--white);letter-spacing:-0.02em;margin-bottom:16px;}
+.cta-section p{font-size:1.05rem;color:rgba(255,255,255,0.65);margin-bottom:36px;}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-cta-primary{display:inline-flex;align-items:center;gap:8px;background:var(--steel-mid);color:var(--white);padding:16px 32px;border-radius:var(--radius);font-weight:600;font-size:1rem;text-decoration:none;transition:background 0.2s;}
+.btn-cta-primary:hover{background:#2278A3;}
+.btn-cta-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,0.85);padding:16px 32px;border-radius:var(--radius);font-weight:500;font-size:1rem;text-decoration:none;border:1px solid rgba(255,255,255,0.25);transition:all 0.2s;}
+.btn-cta-secondary:hover{background:rgba(255,255,255,0.08);}
+.disclaimer{font-size:0.72rem;color:rgba(255,255,255,0.35);max-width:500px;margin:24px auto 0;line-height:1.5;}
+
+/* FOOTER */
+footer{background:var(--charcoal);border-top:1px solid rgba(255,255,255,0.06);padding:48px 24px 24px;}
+.footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px;}
+.footer-brand{max-width:280px;}
+.footer-logo{font-family:var(--serif);font-size:1.15rem;color:var(--white);text-decoration:none;display:inline-flex;flex-direction:column;align-items:flex-start;margin-bottom:12px;line-height:1.1;}
+.footer-logo-brand{display:inline;}
+.footer-logo-ny{color:var(--steel-mid);}
+.footer-logo-sub{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:1px;}
+.footer-tagline{font-size:0.8rem;color:rgba(255,255,255,0.4);line-height:1.5;}
+.footer-col h4{font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:16px;}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:8px;}
+.footer-col a{font-size:0.82rem;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s;}
+.footer-col a:hover{color:var(--white);}
+.footer-bottom{max-width:1180px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;}
+.footer-legal{font-size:0.72rem;color:rgba(255,255,255,0.3);line-height:1.6;max-width:640px;}
+.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.3);white-space:nowrap;}
+
+/* MOBILE */
+@media(max-width:900px){
+  .intro-grid{grid-template-columns:1fr 1fr;}
+  .case-body-grid{grid-template-columns:1fr;}
+  .aged-inner{grid-template-columns:1fr;}
+  .erisa-grid{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .hamburger{display:block;}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:var(--white);padding:20px 24px;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,0.1);gap:4px;}
+  .nav-links.open a{padding:10px 0;font-size:1rem;border-bottom:1px solid var(--border);}
+  .nav-links.open li:last-child a{border-bottom:none;}
+  .intro-grid{grid-template-columns:1fr;}
+  .case-header{grid-template-columns:48px 1fr auto;gap:16px;padding:20px;}
+  .trust-bar-inner{gap:16px;}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:32px;}
+  .footer-bottom{flex-direction:column;}
+  .cta-actions{flex-direction:column;align-items:center;}
+}
+@media(max-width:480px){
+  .footer-inner{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="nav-logo-brand">OutOfNetwork<span class="nav-logo-ny">NY</span></span><span class="nav-logo-sub">by Madison Law Firm PLLC</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/for-providers.html">For Providers</a></li>
+      <li><a href="/how-it-works.html">How It Works</a></li>
+      <li><a href="/case-types.html" style="color:var(--steel);font-weight:600;">Case Types</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/free-guide.html">Free Guide</a></li>
+      <li><a href="/case-evaluator.html" class="nav-cta">Free Evaluation</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">Case Types &amp; Specialties</div>
+    <h1>Every Specialty Has Different IDR Dynamics.<br>We Know Yours.</h1>
+    <p>The credible information that wins an anesthesia dispute is different from what wins a plastic surgery case. The QPA benchmark that applies to a radiologist differs from the one applied to an ASC. Our practice is built around these distinctions.</p>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item"><div class="trust-dot"></div> Surgical Practices</div>
+    <div class="trust-item"><div class="trust-dot"></div> Anesthesiology Groups</div>
+    <div class="trust-item"><div class="trust-dot"></div> Ambulatory Surgical Centers</div>
+    <div class="trust-item"><div class="trust-dot"></div> Radiology &amp; Pathology</div>
+    <div class="trust-item"><div class="trust-dot"></div> Emergency Medicine</div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro-section">
+  <div class="container">
+    <div class="section-eyebrow">Why Specialty Matters</div>
+    <h2 class="section-title">The IDR Process Is the Same.<br>The Strategy Is Not.</h2>
+    <p class="section-sub">Baseball-style arbitration means arbitrators choose one offer. Building the right offer — and the right evidence package — requires knowing your specialty's billing patterns, CPT benchmarks, and what FAIR Health data supports your position.</p>
+    <div class="intro-grid">
+      <div>
+        <div class="intro-stat">
+          <div class="intro-stat-num">85<span>%</span></div>
+          <div class="intro-stat-label">Provider win rate in federal IDR — when cases are prepared correctly</div>
+        </div>
+        <div style="margin-top:16px;" class="intro-stat">
+          <div class="intro-stat-num">3<span>yr</span></div>
+          <div class="intro-stat-label">NY lookback window — aged claims across all specialties may still be disputable</div>
+        </div>
+      </div>
+      <div>
+        <div class="intro-stat" style="height:100%;">
+          <div style="text-align:left;">
+            <div class="section-eyebrow" style="margin-bottom:16px;">What we build for every case</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;gap:10px;font-size:0.875rem;color:var(--gray-dark);"><span style="color:var(--steel-mid);font-weight:700;">→</span> FAIR Health 80th percentile UCR data for your specific CPT codes</li>
+              <li style="display:flex;gap:10px;font-size:0.875rem;color:var(--gray-dark);"><span style="color:var(--steel-mid);font-weight:700;">→</span> Provider credentials and subspecialty documentation</li>
+              <li style="display:flex;gap:10px;font-size:0.875rem;color:var(--gray-dark);"><span style="color:var(--steel-mid);font-weight:700;">→</span> Case complexity and operative report analysis</li>
+              <li style="display:flex;gap:10px;font-size:0.875rem;color:var(--gray-dark);"><span style="color:var(--steel-mid);font-weight:700;">→</span> Prior payment history and market rate comparators</li>
+              <li style="display:flex;gap:10px;font-size:0.875rem;color:var(--gray-dark);"><span style="color:var(--steel-mid);font-weight:700;">→</span> Calibrated last-and-best offer to win, not just dispute</li>
+            </ul>
+          </div>
+          <div class="intro-note">Sources: CMS Federal IDR Public Use Files Q1–Q2 2025; Georgetown CHIR analysis; Elevance Health arbitration outcomes study, JAMA/PMC 2025.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE TYPE CARDS -->
+<section class="cases-section">
+  <div class="container">
+    <div class="section-eyebrow">Specialties We Serve</div>
+    <h2 class="section-title">Case Types &amp; IDR Strategy</h2>
+    <p class="section-sub">Click any specialty to see the specific IDR dynamics, key CPT codes, and strategy considerations for that case type.</p>
+
+    <div class="cases-grid" id="casesGrid">
+
+      <!-- Plastic Surgery -->
+      <div class="case-card" data-card>
+        <div class="case-header" data-header>
+          <div class="case-icon">🔬</div>
+          <div class="case-title-block">
+            <div class="case-title">Plastic &amp; Reconstructive Surgery</div>
+            <div class="case-tags"><span class="tag tag-both">NY IDR + Federal NSA</span><span class="tag tag-hot">High-Value Claims</span></div>
+          </div>
+          <div class="case-chevron">▾</div>
+        </div>
+        <div class="case-body">
+          <div class="case-body-grid">
+            <div class="case-detail-block">
+              <h4>Why These Claims Are Disputed</h4>
+              <p>Plastic surgeons operating at in-network facilities with OON status routinely receive QPA-based payments that bear no relationship to the complexity of the procedure. Reconstructive procedures — breast reductions (CPT 19318), post-mastectomy reconstruction, scar revisions — often involve documentation that, when properly presented, compels arbitrators to award significantly above QPA.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Key CPT Codes &amp; Dynamics</h4>
+              <ul>
+                <li>CPT 19318 (breast reduction) — medically necessary reductions with functional documentation win consistently</li>
+                <li>CPT 19357/19340/19342 — breast reconstruction post-mastectomy, high FAIR Health benchmark</li>
+                <li>CPT 14000–14302 — complex tissue transfers, modifier-heavy billing</li>
+                <li>Cosmetic vs. reconstructive distinction is critical — we document the medical necessity basis for every claim</li>
+              </ul>
+            </div>
+            <div class="case-detail-block">
+              <h4>NY IDR Advantage</h4>
+              <p>NY FSL § 604 requires arbitrators to weigh provider qualifications and case complexity equally with FAIR Health UCR data. For board-certified plastic surgeons with subspecialty training, this is a significant lever. We document fellowship training, board certification, and procedural complexity in every evidence package.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Lookback Opportunity</h4>
+              <p>NY's 3-year lookback means practices that accepted low reimbursements in 2022 and 2023 can still file IDR disputes today. We audit your claim history and identify which underpaid cases remain within the window.</p>
+            </div>
+          </div>
+          <div class="case-strategy"><strong>Our approach:</strong> We build a credentials packet for each surgeon, pull FAIR Health data for every CPT code at the 80th percentile, and attach operative notes that demonstrate the complexity justifying a premium over QPA. Plastic surgery cases are among the highest-value IDR disputes we handle.</div>
+        </div>
+      </div>
+
+      <!-- Anesthesiology -->
+      <div class="case-card" data-card>
+        <div class="case-header" data-header>
+          <div class="case-icon">💉</div>
+          <div class="case-title-block">
+            <div class="case-title">Anesthesiology</div>
+            <div class="case-tags"><span class="tag tag-both">NY IDR + Federal NSA</span><span class="tag tag-ny">Ancillary — Cannot Waive</span></div>
+          </div>
+          <div class="case-chevron">▾</div>
+        </div>
+        <div class="case-body">
+          <div class="case-body-grid">
+            <div class="case-detail-block">
+              <h4>Why Anesthesiologists Cannot Balance-Bill</h4>
+              <p>Under 45 CFR § 149.420(b)(1), ancillary providers — including anesthesiologists — cannot obtain patient consent waivers. You cannot balance-bill. IDR is your only path to fair reimbursement, and the 85% provider win rate reflects the strength of that path when pursued properly.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Billing Units &amp; QPA Issues</h4>
+              <ul>
+                <li>Anesthesia bills in base units + time units — QPA often fails to account for actual case time</li>
+                <li>High-complexity modifiers (P3, P4, P5) are frequently ignored by insurers in initial payment</li>
+                <li>Qualifying circumstances (CPT 99100–99140) are systematically underpaid</li>
+                <li>Large group practices with high volume are ideal for batched IDR filings</li>
+              </ul>
+            </div>
+            <div class="case-detail-block">
+              <h4>Batch Filing Strategy</h4>
+              <p>For anesthesia groups with consistent underpayment patterns, we batch claims by insurer and procedure type to reduce per-claim cost while maintaining the evidentiary quality that wins. Groups with 50+ eligible claims can achieve significant economies of scale through this approach.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>3-Year Lookback</h4>
+              <p>Anesthesia groups that have been accepting systematically low reimbursements often have two or more years of underpaid claims still within the NY IDR window. Our initial evaluation includes a full claim history audit at no cost.</p>
+            </div>
+          </div>
+          <div class="case-strategy"><strong>Our approach:</strong> We document time units, base units, and qualifying circumstances for each claim. For group practices, we identify the highest-value underpaid claims first and build a batching strategy that maximizes recovery relative to arbitration cost.</div>
+        </div>
+      </div>
+
+      <!-- Orthopedic Surgery -->
+      <div class="case-card" data-card>
+        <div class="case-header" data-header>
+          <div class="case-icon">🦴</div>
+          <div class="case-title-block">
+            <div class="case-title">Orthopedic Surgery</div>
+            <div class="case-tags"><span class="tag tag-both">NY IDR + Federal NSA</span></div>
+          </div>
+          <div class="case-chevron">▾</div>
+        </div>
+        <div class="case-body">
+          <div class="case-body-grid">
+            <div class="case-detail-block">
+              <h4>High-Value Procedure Types</h4>
+              <p>Orthopedic surgeons performing joint replacements, spine procedures, and complex trauma repairs OON are among the most frequently underpaid specialists. Insurers often apply QPA rates derived from high-volume in-network contracts that bear no relationship to the complexity of OON orthopedic work.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Key CPT Codes</h4>
+              <ul>
+                <li>CPT 27447/27446 — total knee/hip replacement</li>
+                <li>CPT 22612/22630 — lumbar spinal fusion</li>
+                <li>CPT 29827 — rotator cuff repair (arthroscopic)</li>
+                <li>CPT 27130 — total hip arthroplasty</li>
+                <li>Trauma codes (CPT 27236, 27244) — typically high FAIR Health benchmarks</li>
+              </ul>
+            </div>
+            <div class="case-detail-block">
+              <h4>Fellowship &amp; Subspecialty Documentation</h4>
+              <p>Board certification in orthopedic surgery with fellowship training in spine, joint replacement, or sports medicine is a material factor under FSL § 604's equal-weight framework. We build a credentials package that makes subspecialty expertise a central part of every evidence submission.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Implant &amp; Facility Considerations</h4>
+              <p>Cases involving implants (prosthetic joints, hardware) require careful separation of facility fees from professional fees. We ensure the IDR dispute targets the correct component and that implant costs are documented and attributed appropriately.</p>
+            </div>
+          </div>
+          <div class="case-strategy"><strong>Our approach:</strong> Orthopedic cases often have the highest per-claim recovery potential of any specialty. We prioritize them in initial claim audits and build detailed operative report summaries that demonstrate complexity well beyond QPA assumptions.</div>
+        </div>
+      </div>
+
+      <!-- Neurosurgery -->
+      <div class="case-card" data-card>
+        <div class="case-header" data-header>
+          <div class="case-icon">🧠</div>
+          <div class="case-title-block">
+            <div class="case-title">Neurosurgery</div>
+            <div class="case-tags"><span class="tag tag-both">NY IDR + Federal NSA</span><span class="tag tag-hot">High Complexity</span></div>
+          </div>
+          <div class="case-chevron">▾</div>
+        </div>
+        <div class="case-body">
+          <div class="case-body-grid">
+            <div class="case-detail-block">
+              <h4>Why Neurosurgery Claims Are Strong</h4>
+              <p>Neurosurgery has among the highest FAIR Health UCR benchmarks of any surgical specialty. The QPA for neurosurgical procedures is frequently calculated from a limited pool of in-network comparators — often understating true market rates by 50–70%. When FAIR Health 80th percentile data is presented alongside board certification and case complexity documentation, arbitrators consistently favor providers.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Key Procedure Types</h4>
+              <ul>
+                <li>Spinal cord and brain tumor resections</li>
+                <li>Cervical and lumbar disc surgery (CPT 63047, 22551)</li>
+                <li>Craniotomy procedures (CPT 61510, 61512)</li>
+                <li>Vascular neurosurgery (aneurysm clipping, AVM resection)</li>
+                <li>Emergency neurosurgical procedures — always protected under NSA</li>
+              </ul>
+            </div>
+            <div class="case-detail-block">
+              <h4>Emergency Service Protection</h4>
+              <p>Emergency neurosurgical procedures are fully protected under both NY FSL Article 6 and the federal No Surprises Act regardless of insurer network status. No consent waiver is possible. IDR is always available, and the protections are absolute.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Credential Documentation</h4>
+              <p>Neurosurgeons trained at academic medical centers with subspecialty focus (skull base, spine, vascular) have strong documentation arguments under the qualifications factor. We obtain and present these credentials in a format that arbitrators can assess quickly and favorably.</p>
+            </div>
+          </div>
+          <div class="case-strategy"><strong>Our approach:</strong> Neurosurgery cases are among the highest-value disputes we handle. We focus heavily on the gap between QPA and FAIR Health 80th percentile data, which is typically wider for neurosurgery than for any other specialty.</div>
+        </div>
+      </div>
+
+      <!-- Radiology & Pathology -->
+      <div class="case-card" data-card>
+        <div class="case-header" data-header>
+          <div class="case-icon">📋</div>
+          <div class="case-title-block">
+            <div class="case-title">Radiology &amp; Pathology</div>
+            <div class="case-tags"><span class="tag tag-both">NY IDR + Federal NSA</span><span class="tag tag-ny">Ancillary — Batch-Friendly</span></div>
+          </div>
+          <div class="case-chevron">▾</div>
+        </div>
+        <div class="case-body">
+          <div class="case-body-grid">
+            <div class="case-detail-block">
+              <h4>Inherently Ancillary Status</h4>
+              <p>Radiologists and pathologists are among the most common IDR filers nationally. Because patients cannot select their radiologist or pathologist, these services are inherently ancillary — patients cannot waive surprise billing protections, and insurers cannot reduce payments below IDR outcomes.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>High-Volume Batching</h4>
+              <ul>
+                <li>Radiology groups with consistent underpayment from a single insurer are ideal for batched filing</li>
+                <li>Claims with the same CPT code and same insurer can be batched to reduce per-claim cost</li>
+                <li>MRI, CT, and interventional radiology codes often have favorable FAIR Health benchmarks</li>
+                <li>Pathology: surgical pathology (CPT 88302–88309) is frequently underpaid at QPA levels</li>
+              </ul>
+            </div>
+            <div class="case-detail-block">
+              <h4>FAIR Health Data Advantage</h4>
+              <p>Diagnostic imaging and pathology have well-established FAIR Health UCR benchmarks. The gap between QPA and the 80th percentile UCR for many radiology codes is substantial and consistently documentable. This predictability makes radiology and pathology disputes highly efficient to prepare.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Teleradiology Considerations</h4>
+              <p>Teleradiology groups reading studies for OON patients face unique jurisdictional questions about which state's IDR rules apply. We analyze each case individually and apply the most favorable framework — which in most cases involving New York patients is NY state IDR.</p>
+            </div>
+          </div>
+          <div class="case-strategy"><strong>Our approach:</strong> For radiology and pathology groups, we focus on the volume opportunity. Initial evaluation identifies the highest-frequency underpaid CPT codes, and we build a batching strategy that makes IDR economically efficient at scale.</div>
+        </div>
+      </div>
+
+      <!-- Ambulatory Surgical Centers -->
+      <div class="case-card" data-card>
+        <div class="case-header" data-header>
+          <div class="case-icon">🏥</div>
+          <div class="case-title-block">
+            <div class="case-title">Ambulatory Surgical Centers</div>
+            <div class="case-tags"><span class="tag tag-both">NY IDR + Federal NSA</span><span class="tag tag-hot">Facility Fees</span></div>
+          </div>
+          <div class="case-chevron">▾</div>
+        </div>
+        <div class="case-body">
+          <div class="case-body-grid">
+            <div class="case-detail-block">
+              <h4>Facility Fees Are Separately Disputable</h4>
+              <p>ASC facility fees and professional fees are separate claims and can be disputed independently. Many ASCs have accepted whatever the insurer paid on facility fees without realizing these are fully IDR-eligible. Facility fee disputes represent some of the highest-value cases we handle, often 3–5× the QPA on a per-claim basis.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Which Procedures Are Eligible</h4>
+              <ul>
+                <li>Any procedure performed at an ASC where the patient has OON coverage for the facility</li>
+                <li>Procedures where the operating surgeon is in-network but the ASC is not</li>
+                <li>Emergency procedures always protected — no consent waiver possible</li>
+                <li>NY's 3-year lookback applies to facility fee underpayments as well as professional fees</li>
+              </ul>
+            </div>
+            <div class="case-detail-block">
+              <h4>Documentation Requirements</h4>
+              <p>ASC disputes require facility-specific documentation: accreditation status, equipment capabilities, average case complexity, and staffing levels. We build a facility profile that presents the ASC's operational characteristics as factors supporting the higher payment amount.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Administrator Coordination</h4>
+              <p>We work directly with billing managers and ASC administrators. Our process is designed to minimize disruption to your billing operations — we collect what we need up front and handle all IDR filings, deadlines, and arbitrator communications independently.</p>
+            </div>
+          </div>
+          <div class="case-strategy"><strong>Our approach:</strong> ASC cases often have the highest aggregate recovery potential of any case type we handle, particularly when the facility has been systematically accepting QPA-based facility fee payments for multiple years. Our first step is always a free audit of your facility fee claim history.</div>
+        </div>
+      </div>
+
+      <!-- Emergency Medicine -->
+      <div class="case-card" data-card>
+        <div class="case-header" data-header>
+          <div class="case-icon">🚨</div>
+          <div class="case-title-block">
+            <div class="case-title">Emergency Medicine</div>
+            <div class="case-tags"><span class="tag tag-both">NY IDR + Federal NSA</span><span class="tag tag-ny">Always Protected</span></div>
+          </div>
+          <div class="case-chevron">▾</div>
+        </div>
+        <div class="case-body">
+          <div class="case-body-grid">
+            <div class="case-detail-block">
+              <h4>Emergency Services — Absolute Protection</h4>
+              <p>Emergency services are fully protected under both NY FSL Article 6 and the federal No Surprises Act. No consent waiver is possible for emergency care. Insurers cannot reduce emergency payments below the IDR-determined amount, and all emergency services — regardless of the insurer or plan type — are subject to dispute.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>EM Group Strategy</h4>
+              <ul>
+                <li>Large EM groups can batch claims by insurer, resulting in significant per-claim cost reduction</li>
+                <li>Level 4 and Level 5 E&amp;M codes (CPT 99284, 99285) are systematically underpaid at QPA</li>
+                <li>Critical care codes (CPT 99291, 99292) often have the largest QPA-to-FAIR-Health gap</li>
+                <li>Hospital medicine and hospitalist groups face similar dynamics</li>
+              </ul>
+            </div>
+            <div class="case-detail-block">
+              <h4>Federal NSA Priority</h4>
+              <p>For emergency medicine groups, the federal No Surprises Act often provides better protections than NY state IDR because it covers ERISA self-funded plans that NY state law cannot reach. We analyze each claim to determine whether NY IDR, federal NSA, or both provide the optimal path to recovery.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Hospital Contracting Interaction</h4>
+              <p>EM groups operating under hospital contracts need to ensure their IDR filings are structured correctly relative to any facility-level agreements. We review the contractual landscape before filing to avoid inadvertent waiver of IDR rights.</p>
+            </div>
+          </div>
+          <div class="case-strategy"><strong>Our approach:</strong> Emergency medicine groups with 100+ underpaid claims per month are ideal clients. We structure a batching program that makes IDR a routine part of the revenue cycle rather than a one-off dispute process.</div>
+        </div>
+      </div>
+
+      <!-- Cardiology -->
+      <div class="case-card" data-card>
+        <div class="case-header" data-header>
+          <div class="case-icon">❤️</div>
+          <div class="case-title-block">
+            <div class="case-title">Cardiology &amp; Cardiac Surgery</div>
+            <div class="case-tags"><span class="tag tag-both">NY IDR + Federal NSA</span></div>
+          </div>
+          <div class="case-chevron">▾</div>
+        </div>
+        <div class="case-body">
+          <div class="case-body-grid">
+            <div class="case-detail-block">
+              <h4>Interventional &amp; Surgical Cardiology</h4>
+              <p>Interventional cardiologists and cardiac surgeons performing OON procedures face QPA benchmarks that significantly undervalue complex cardiac work. Procedures involving advanced technology, long operative times, or high ASA physical status are particularly well-suited for IDR.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Key Procedure Types</h4>
+              <ul>
+                <li>CABG procedures (CPT 33510–33536) — high FAIR Health benchmarks</li>
+                <li>Valve repair and replacement (CPT 33361–33430)</li>
+                <li>TAVR and structural heart procedures</li>
+                <li>Complex PCI (CPT 92928, 92941) with multiple vessel involvement</li>
+                <li>Electrophysiology and ablation procedures</li>
+              </ul>
+            </div>
+            <div class="case-detail-block">
+              <h4>Emergency Cardiac Procedures</h4>
+              <p>Emergency cardiac procedures — including STEMI intervention, emergency CABG, and aortic repair — are fully protected under both NY and federal law. No consent waiver is possible in any true emergency presentation. These cases are among the most defensible in IDR.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Technology &amp; Complexity Documentation</h4>
+              <p>Advanced cardiac procedures using robotic-assisted surgery, 3D mapping systems, or ECMO support can be documented in ways that justify premium reimbursement. We work with your team to capture the technology and complexity elements that support a higher offer in arbitration.</p>
+            </div>
+          </div>
+          <div class="case-strategy"><strong>Our approach:</strong> Cardiac surgery and interventional cardiology cases often represent the single highest per-claim recovery opportunity we encounter. A single complex CABG or valve replacement dispute can involve a six-figure underpayment.</div>
+        </div>
+      </div>
+
+      <!-- Neonatology & Pediatric Subspecialties -->
+      <div class="case-card" data-card>
+        <div class="case-header" data-header>
+          <div class="case-icon">👶</div>
+          <div class="case-title-block">
+            <div class="case-title">Neonatology &amp; Pediatric Subspecialties</div>
+            <div class="case-tags"><span class="tag tag-both">NY IDR + Federal NSA</span><span class="tag tag-ny">Ancillary — Cannot Waive</span></div>
+          </div>
+          <div class="case-chevron">▾</div>
+        </div>
+        <div class="case-body">
+          <div class="case-body-grid">
+            <div class="case-detail-block">
+              <h4>Neonatal Intensive Care</h4>
+              <p>Neonatologists providing intensive care to premature or critically ill newborns are ancillary providers — parents cannot select the neonatologist and cannot waive surprise billing protections. NICU care at OON hospitals is frequently underpaid at QPA levels that fail to account for the complexity and duration of neonatal critical care.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Critical Care Codes</h4>
+              <ul>
+                <li>CPT 99468–99476 — neonatal and pediatric critical care (per day)</li>
+                <li>CPT 99291/99292 — critical care, first hour and additional</li>
+                <li>High-risk delivery attendance codes</li>
+                <li>Subspecialty consultation codes in NICU setting</li>
+              </ul>
+            </div>
+            <div class="case-detail-block">
+              <h4>Pediatric Surgical Subspecialties</h4>
+              <p>Pediatric surgeons, pediatric cardiac surgeons, and pediatric neurosurgeons operate in a market with very limited in-network comparators — meaning QPA calculations are often based on thin data that substantially undervalues these services. FAIR Health UCR data for pediatric subspecialty codes typically shows a large QPA gap.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Duration and Continuity</h4>
+              <p>NICU cases often involve extended stays with daily critical care billing. When an insurer systematically underpays daily critical care codes, the aggregate underpayment over a stay can be substantial. We analyze the full episode of care to identify the total disputable amount.</p>
+            </div>
+          </div>
+          <div class="case-strategy"><strong>Our approach:</strong> Neonatology and pediatric subspecialty groups are often unaware of the IDR opportunity. We handle the entire process — from claim audit to arbitration — with no disruption to clinical operations.</div>
+        </div>
+      </div>
+
+      <!-- General Surgery -->
+      <div class="case-card" data-card>
+        <div class="case-header" data-header>
+          <div class="case-icon">🔧</div>
+          <div class="case-title-block">
+            <div class="case-title">General Surgery</div>
+            <div class="case-tags"><span class="tag tag-both">NY IDR + Federal NSA</span></div>
+          </div>
+          <div class="case-chevron">▾</div>
+        </div>
+        <div class="case-body">
+          <div class="case-body-grid">
+            <div class="case-detail-block">
+              <h4>Breadth of Eligible Procedures</h4>
+              <p>General surgeons performing OON procedures — including complex abdominal surgery, hernia repairs, laparoscopic procedures, and oncologic resections — are frequently underpaid at QPA levels that fail to capture case complexity, operative time, or the surgeon's experience and board status.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Common Underpaid Procedure Types</h4>
+              <ul>
+                <li>Colon resections (CPT 44140–44160) — high complexity, long operative times</li>
+                <li>Complex hernia repairs with mesh (CPT 49560, 49565)</li>
+                <li>Cholecystectomy with complications</li>
+                <li>Oncologic resections — pancreatectomy, Whipple procedure</li>
+                <li>Laparoscopic procedures with conversion to open</li>
+              </ul>
+            </div>
+            <div class="case-detail-block">
+              <h4>Surgical Complexity Documentation</h4>
+              <p>For general surgery, the operative report is the most important piece of evidence. We work with your team to extract the complexity factors — adhesions, anatomical difficulty, prior surgeries, comorbidities — that support reimbursement above QPA.</p>
+            </div>
+            <div class="case-detail-block">
+              <h4>Emergency General Surgery</h4>
+              <p>Appendectomies, perforated viscus repairs, and other emergency general surgery cases are fully protected. These cases are IDR-eligible without any consent requirement, and the emergency nature of the procedure is itself a complexity factor that supports higher reimbursement.</p>
+            </div>
+          </div>
+          <div class="case-strategy"><strong>Our approach:</strong> General surgery practices often have a mix of high-value and moderate-value underpaid claims. We triage the claim history to prioritize the highest-value disputes first while building a systematic program for the full eligible claim population.</div>
+        </div>
+      </div>
+
+    </div><!-- /cases-grid -->
+  </div>
+</section>
+
+<!-- ERISA SECTION -->
+<section class="erisa-section">
+  <div class="container">
+    <div class="section-eyebrow" style="color:rgba(255,255,255,0.5);">Federal NSA vs. NY IDR</div>
+    <h2 class="section-title">Which Law Applies to Your Claims?</h2>
+    <p class="section-sub">Not every claim falls under NY state IDR. Self-funded ERISA plans — which cover roughly 60% of commercially insured New Yorkers — are governed by federal law. We analyze every claim to identify the correct forum.</p>
+    <div class="erisa-grid">
+      <div class="erisa-card">
+        <h3>New York State IDR</h3>
+        <p>Applies to <span class="erisa-highlight">fully insured</span> NY health plans regulated by the NY Department of Financial Services. Governed by Financial Services Law Article 6 and 23 NYCRR 400. Key advantages: <span class="erisa-highlight">3-year lookback</span>, FAIR Health 80th percentile UCR standard, all factors weighted equally. NY state IDR cannot reach ERISA self-funded plans.</p>
+      </div>
+      <div class="erisa-card">
+        <h3>Federal No Surprises Act</h3>
+        <p>Applies to <span class="erisa-highlight">ERISA self-funded plans</span> and all other group health plans not subject to state regulation. Governed by 42 U.S.C. §§ 300gg-111 et seq. Key features: QPA as baseline, baseball-style arbitration, <span class="erisa-highlight">4-business-day filing window</span> after open negotiation. No 3-year lookback — filing deadlines are strict.</p>
+      </div>
+      <div class="erisa-card">
+        <h3>Dual Coverage (NY Fully Insured)</h3>
+        <p>For fully insured NY plans, both NY IDR and the federal NSA may apply. NY law expressly states the framework providing <span class="erisa-highlight">more protection</span> to the patient or provider prevails. In practice, NY IDR's FAIR Health standard and 3-year lookback make it the superior forum for most fully insured NY claims.</p>
+      </div>
+      <div class="erisa-card">
+        <h3>We Analyze Every Claim</h3>
+        <p>Before filing any dispute, we identify the applicable framework for each claim — NY IDR, federal NSA, or both. For practices with mixed payer populations, this analysis determines the filing strategy. <span class="erisa-highlight">We handle both forums</span> and select the one that maximizes recovery for your specific claims.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AGED CLAIMS SECTION -->
+<section class="aged-section">
+  <div class="container">
+    <div class="aged-inner">
+      <div>
+        <div class="section-eyebrow">NY 3-Year Lookback</div>
+        <h2 class="section-title">Claims You Wrote Off May Still Be Recoverable</h2>
+        <p class="section-sub">New York's 3-year lookback window is one of the most underutilized protections in the state IDR framework. Most practices don't know it exists — or assume it's too late to act on claims from 2022 and 2023.</p>
+        <div class="aged-steps">
+          <div class="aged-step">
+            <div class="aged-num">1</div>
+            <div class="aged-body">
+              <h4>We audit your claim history</h4>
+              <p>We review EOBs and payment records from the past 3 years to identify claims paid below FAIR Health 80th percentile UCR. No upfront cost for the audit.</p>
+            </div>
+          </div>
+          <div class="aged-step">
+            <div class="aged-num">2</div>
+            <div class="aged-body">
+              <h4>We identify the disputable amount</h4>
+              <p>For each underpaid claim still within the 3-year window, we calculate the gap between what was paid and what FAIR Health data supports as the UCR.</p>
+            </div>
+          </div>
+          <div class="aged-step">
+            <div class="aged-num">3</div>
+            <div class="aged-body">
+              <h4>We file and handle everything</h4>
+              <p>We prepare the evidence package, file with the NY DFS-designated IDRE, manage all deadlines, and represent your practice through the determination. Contingency basis — no recovery, no fee.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aged-cta-card">
+        <h3>Find Out What You're Owed</h3>
+        <p>Free, no-obligation evaluation of your claim history. Most practices are surprised by how much is still on the table.</p>
+        <a href="/case-evaluator.html" class="btn-primary">Start Free Evaluation →</a>
+        <a href="/free-guide.html" class="btn-secondary">Download the Free OON Guide</a>
+        <p style="font-size:0.72rem;color:var(--gray-mid);margin-top:16px;line-height:1.4;">Madison Law Firm PLLC · 579 Fifth Avenue, NYC · (212) 300-3191 · inquiries@madisonlawfirm.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Find Out What Your Practice Is Owed?</h2>
+    <p>Free case evaluation. No upfront cost. No recovery, no fee.</p>
+    <div class="cta-actions">
+      <a href="/case-evaluator.html" class="btn-cta-primary">Start Free Evaluation →</a>
+      <a href="tel:2123003191" class="btn-cta-secondary">(212) 300-3191</a>
+    </div>
+    <p class="disclaimer">Madison Law Firm PLLC · 579 Fifth Avenue, 2nd Floor, New York, NY 10017 · inquiries@madisonlawfirm.com · Attorney advertising. Prior results do not guarantee similar outcomes.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo"><span class="footer-logo-brand">OutOfNetwork<span class="footer-logo-ny">NY</span></span><span class="footer-logo-sub">by Madison Law Firm PLLC</span></a>
+      <p class="footer-tagline">A specialty practice of Madison Law Firm PLLC. Representing out-of-network medical providers in New York state IDR and federal No Surprises Act arbitration.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Providers</h4>
+      <ul>
+        <li><a href="/for-providers.html">Why Dispute?</a></li>
+        <li><a href="/case-types.html">Case Types</a></li>
+        <li><a href="/how-it-works.html">Process Guide</a></li>
+        <li><a href="/free-guide.html">Free OON Guide</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/case-evaluator.html">Case Evaluator</a></li>
+        <li><a href="https://www.dfs.ny.gov" target="_blank" rel="noopener">NY DFS Portal</a></li>
+        <li><a href="https://www.cms.gov/nosurprises" target="_blank" rel="noopener">Federal IDR Portal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Firm</h4>
+      <ul>
+        <li><a href="/contact.html">Contact Us</a></li>
+        <li><a href="https://www.madisonlawfirm.com" target="_blank">Madison Law Firm</a></li>
+        <li><a href="https://www.callcuz.com" target="_blank">CallCuz.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-legal">Madison Law Firm PLLC · 579 Fifth Avenue, 2nd Floor, New York, NY 10017 · (212) 300-3191 · inquiries@madisonlawfirm.com. Attorney advertising. This website is for informational purposes only and does not constitute legal advice. No attorney-client relationship is formed by use of this site. Prior results do not guarantee similar outcomes. New York State IDR governed by NY Financial Services Law Article 6 and 23 NYCRR 400. Federal IDR governed by the No Surprises Act, 42 U.S.C. §§ 300gg-111 et seq.</p>
+    <p class="footer-copy">© 2026 Madison Law Firm PLLC</p>
+  </div>
+</footer>
+
+<script>
+// Hamburger
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// Accordion case cards
+document.querySelectorAll('[data-header]').forEach(header => {
+  header.addEventListener('click', () => {
+    const card = header.closest('[data-card]');
+    const isOpen = card.classList.contains('open');
+    // Close all
+    document.querySelectorAll('[data-card]').forEach(c => c.classList.remove('open'));
+    // Toggle clicked
+    if (!isOpen) card.classList.add('open');
+  });
+});
+
+// Open first card by default
+document.querySelector('[data-card]').classList.add('open');
+</script>
+</body>
+</html>

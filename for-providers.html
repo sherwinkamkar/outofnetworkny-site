@@ -23,8 +23,8 @@ html{scroll-behavior:smooth;}
 body{font-family:var(--sans);color:var(--gray-dark);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);}
 .nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:68px;}
-.nav-logo{font-family:var(--serif);font-size:1.55rem;color:var(--steel);text-decoration:none;letter-spacing:-0.01em;line-height:1.1;display:inline-flex;flex-direction:column;align-items:flex-start;}.nav-logo-brand{display:inline;}
-.nav-logo-ny{color:var(--steel-mid);}.nav-logo-sub{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--gray-mid);margin-top:1px;}
+.nav-logo{font-family:var(--serif);font-size:1.2rem;color:var(--steel);text-decoration:none;}
+.nav-logo span{color:var(--steel-mid);}
 .nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
 .nav-links a{font-size:0.875rem;font-weight:500;color:var(--gray-dark);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--steel);}
@@ -99,4 +99,355 @@ section{padding:72px 24px;}
 /* CTA */
 .cta-bar{background:linear-gradient(135deg,var(--charcoal) 0%,var(--steel) 100%);padding:64px 24px;text-align:center;}
 .cta-bar h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);color:var(--white);margin-bottom:14px;}
-.cta-bar p{color:rgba(255,255,2
+.cta-bar p{color:rgba(255,255,255,0.65);font-size:1rem;margin-bottom:28px;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--steel-mid);color:var(--white);padding:14px 28px;border-radius:var(--radius);font-weight:600;font-size:0.95rem;text-decoration:none;transition:background 0.2s;}
+.btn-primary:hover{background:#2278A3;}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,0.8);padding:14px 28px;border-radius:var(--radius);font-weight:500;font-size:0.95rem;text-decoration:none;border:1px solid rgba(255,255,255,0.25);transition:all 0.2s;margin-left:12px;}
+/* FOOTER */
+footer{background:var(--charcoal);border-top:1px solid rgba(255,255,255,0.06);padding:32px 24px;}
+.footer-bottom{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-legal{font-size:0.72rem;color:rgba(255,255,255,0.3);line-height:1.6;max-width:640px;}
+.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.3);}
+@media(max-width:768px){
+  .nav-links{display:none;} .hamburger{display:block;}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:var(--white);padding:20px 24px 28px;border-bottom:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,0.1);gap:4px;}
+  .problem-grid{grid-template-columns:1fr;} .what-grid{grid-template-columns:1fr;}
+  .fees-grid{grid-template-columns:1fr;} .spec-body-grid{grid-template-columns:1fr;}
+  .problem-quote{position:static;}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">OutOfNetwork<span>NY</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/for-providers.html">For Providers</a></li>
+      <li><a href="/how-it-works.html">How It Works</a></li>
+      <li><a href="/case-types.html">Case Types</a></li>
+      <li><a href="/faq.html">FAQ</a></li>
+      <li><a href="/free-guide.html">Free Guide</a></li>
+      <li><a href="/case-evaluator.html" class="nav-cta">Free Evaluation</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-eyebrow">For Out-of-Network Providers</div>
+    <h1>The Insurer Is Not Setting a Fair Rate. You Have the Right to Fight It.</h1>
+    <p>Most out-of-network providers accept whatever the insurer pays because they don't know they can dispute it — or don't have the legal infrastructure to do so. We build that infrastructure for you, on contingency.</p>
+  </div>
+</div>
+
+<section class="problem-section">
+  <div class="container">
+    <div class="section-eyebrow">The Problem</div>
+    <h2 class="section-title">Why Systematic Underpayment Persists</h2>
+    <div class="problem-grid">
+      <div class="problem-points">
+        <div class="problem-point">
+          <div class="problem-icon">📉</div>
+          <div>
+            <h4>The QPA Is Not a Fair Rate — It's a Floor</h4>
+            <p>The federal Qualifying Payment Amount is a 2019 median contracted rate, indexed for inflation. Arbitrators have consistently found it understates actual market value — median awards now exceed 4× the QPA. Yet insurers pay it as though it's the ceiling.</p>
+          </div>
+        </div>
+        <div class="problem-point">
+          <div class="problem-icon">⏱️</div>
+          <div>
+            <h4>Most Providers Miss the Filing Windows</h4>
+            <p>The federal IDR process has a 4-business-day window to file after the 30-day negotiation period closes. Most small practices have no system to track this. Missed deadlines mean forfeited claims — permanently.</p>
+          </div>
+        </div>
+        <div class="problem-point">
+          <div class="problem-icon">📋</div>
+          <div>
+            <h4>The Credible Information Package Is Decisive</h4>
+            <p>Baseball-style arbitration means the arbitrator picks one offer. Providers who win build comprehensive evidence packages: FAIR Health data, provider credentials, case complexity documentation, and prior payment history. Most practices submit none of this.</p>
+          </div>
+        </div>
+        <div class="problem-point">
+          <div class="problem-icon">🗓️</div>
+          <div>
+            <h4>Underpaid NY Claims May Still Be Recoverable</h4>
+            <p>New York state IDR under Financial Services Law Article 6 allows providers to dispute claims within 3 years of the original payment. Claims written off in 2022 or 2023 may still be arbitrable under 23 NYCRR 400.</p>
+          </div>
+        </div>
+      </div>
+      <div class="problem-quote">
+        <p class="pq-text">"A large percentage of out-of-network providers do not submit claims to arbitration and are, therefore, stuck with a fractional QPA payment. The insurance carriers know this and pay these providers peanuts."</p>
+        <p class="pq-stat">— Minevich Law Group, healthcare reimbursement attorneys</p>
+        <br>
+        <div class="pq-num">85%</div>
+        <p class="pq-stat">Provider win rate in federal IDR disputes (CMS 2024 data)</p>
+        <br>
+        <div class="pq-num">4×</div>
+        <p class="pq-stat">Median award above insurer's QPA offer (Q4 2024)</p>
+        <br>
+        <div class="pq-num">99%+</div>
+        <p class="pq-stat">Of IDR disputes are initiated by providers, not insurers</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--white);">
+  <div class="container">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">End-to-End IDR Representation on Contingency</h2>
+    <p class="section-sub">We handle the entire arbitration process so your billing staff doesn't have to. No upfront cost — we only get paid if you do.</p>
+    <div class="what-grid">
+      <div class="what-card">
+        <div class="what-num">01</div>
+        <h3>Claim Audit & Eligibility Review</h3>
+        <p>We review your claim history to identify all disputes eligible for NY state IDR or federal NSA arbitration — including claims going back 3 years under New York law. Most practices discover significant recoverable revenue they didn't know existed.</p>
+      </div>
+      <div class="what-card">
+        <div class="what-num">02</div>
+        <h3>Deadline Tracking & Filing</h3>
+        <p>We track all federal IDR filing windows (4 business days post-negotiation period) and NY IDR deadlines (3 years from original payment). We draft and submit all IDR initiation notices, select certified IDR entities strategically, and manage all correspondence with the CMS or DFS portal.</p>
+      </div>
+      <div class="what-card">
+        <div class="what-num">03</div>
+        <h3>Credible Information Package</h3>
+        <p>We build the evidentiary submission that wins arbitration: FAIR Health 80th percentile data for the specific CPT code and ZIP code, your credentials and board certifications, case complexity documentation from operative reports, and prior payment history with the disputing payer.</p>
+      </div>
+      <div class="what-card">
+        <div class="what-num">04</div>
+        <h3>Offer Calibration Strategy</h3>
+        <p>Baseball-style arbitration is won or lost on offer positioning. We calibrate your offer to be the "reasonable" one versus the payer's QPA-anchored offer. Offers too close to billed charges lose credibility; offers too close to QPA leave money on the table. We find the right number.</p>
+      </div>
+      <div class="what-card">
+        <div class="what-num">05</div>
+        <h3>Batching for High-Volume Practices</h3>
+        <p>For practices with high claim volumes against the same payer, we batch multiple disputes into single IDR filings — dramatically reducing per-claim administrative cost and arbitration fees. This is the strategy used by the most successful high-volume IDR filers nationally.</p>
+      </div>
+      <div class="what-card">
+        <div class="what-num">06</div>
+        <h3>Post-Award Enforcement</h3>
+        <p>IDR determinations are binding. If an insurer fails to pay within 30 days of determination, we pursue enforcement. We also handle reopening requests when an IDR entity has committed a procedural error — a right clarified by CMS guidance in 2025.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spec-section">
+  <div class="container">
+    <div class="section-eyebrow">Specialty Strategies</div>
+    <h2 class="section-title">How We Approach Each Specialty</h2>
+    <p class="section-sub">Every specialty has a different credible information framework. Here's what we focus on for the most common provider types we represent.</p>
+    <div class="spec-accordion">
+
+      <div class="spec-item">
+        <button class="spec-header-btn">
+          <div class="spec-header-left">
+            <span class="spec-emoji-sm">💉</span>
+            <div>
+              <div class="spec-header-title">Anesthesiologists</div>
+              <div class="spec-header-sub">Ancillary provider · Cannot obtain consent waiver · IDR is your only path</div>
+            </div>
+          </div>
+          <span class="spec-chevron">▾</span>
+        </button>
+        <div class="spec-body">
+          <p style="font-size:0.875rem;color:var(--gray-mid);margin-bottom:16px;">Anesthesiologists are defined as ancillary providers under 45 C.F.R. § 149.420(b)(1) and NY FSL § 603(h). You cannot obtain patient consent waivers. You cannot balance-bill. Your revenue recovery is entirely through IDR — which means every underpaid claim that goes undisputed is permanent revenue loss.</p>
+          <div class="spec-body-grid">
+            <div class="spec-tip">
+              <h5>Key Documentation</h5>
+              <ul>
+                <li>ASA physical status classification</li>
+                <li>Total base units + time units (each 15-min block)</li>
+                <li>Qualifying circumstances (QC) modifiers where applicable</li>
+                <li>Case complexity — unusual anesthetic management</li>
+                <li>FAIR Health 80th percentile for anesthesia CPT codes in your ZIP</li>
+                <li>Co-morbidities documented in pre-op assessment</li>
+              </ul>
+            </div>
+            <div class="spec-tip">
+              <h5>NY Advantage</h5>
+              <ul>
+                <li>NY IDR 3-year window applies — review all underpaid claims back to 2022 or earlier for fully insured NY plans</li>
+                <li>FAIR Health UCR (not QPA) is the standard — typically 2-4× higher than QPA for anesthesia codes</li>
+                <li>Prior rates from same payer are powerful credible information</li>
+                <li>No single factor is determinative — credentials + complexity + UCR all weigh equally</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spec-item">
+        <button class="spec-header-btn">
+          <div class="spec-header-left">
+            <span class="spec-emoji-sm">🔬</span>
+            <div>
+              <div class="spec-header-title">Plastic & Reconstructive Surgeons</div>
+              <div class="spec-header-sub">Highest IDR utilization in NY · Medically necessary procedures + elective OON</div>
+            </div>
+          </div>
+          <span class="spec-chevron">▾</span>
+        </button>
+        <div class="spec-body">
+          <p style="font-size:0.875rem;color:var(--gray-mid);margin-bottom:16px;">Brookings Institution analysis of NY IDR data identifies plastic surgeons as the single most frequent utilizer of NY state IDR. This includes both emergency/reconstructive procedures and elective procedures where the surgeon is OON at an in-network facility.</p>
+          <div class="spec-body-grid">
+            <div class="spec-tip">
+              <h5>Breast Reduction (CPT 19318) — A Major Opportunity</h5>
+              <ul>
+                <li>Must establish medical necessity: chronic back/neck/shoulder pain, skin irritation, failed conservative treatment</li>
+                <li>Schnur Scale documentation (tissue removed in grams per side, correlated to BSA)</li>
+                <li>Pre-authorization approval letter required</li>
+                <li>PCP + specialist documentation of symptoms</li>
+                <li>DFS OON Reimbursement Examples specifically include CPT 19357 — indicating this is a frequently disputed service</li>
+                <li>FAIR Health 80th percentile for CPT 19318 in surgeon's ZIP code</li>
+              </ul>
+            </div>
+            <div class="spec-tip">
+              <h5>OON Surgical Strategy Generally</h5>
+              <ul>
+                <li>Modifier -22 for unusually complex procedures — documents complexity from claim submission</li>
+                <li>Detailed operative reports are read by arbitrators</li>
+                <li>Board certifications, fellowship training, subspecialty credentials</li>
+                <li>Volume of procedures performed (demonstrates specialized expertise)</li>
+                <li>Outcomes data and complication rates where available</li>
+                <li>Case complexity: unusual anatomy, prior surgeries, intraoperative findings</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spec-item">
+        <button class="spec-header-btn">
+          <div class="spec-header-left">
+            <span class="spec-emoji-sm">📡</span>
+            <div>
+              <div class="spec-header-title">Radiologists & Pathologists</div>
+              <div class="spec-header-sub">Ancillary providers · High-volume batching candidates</div>
+            </div>
+          </div>
+          <span class="spec-chevron">▾</span>
+        </button>
+        <div class="spec-body">
+          <p style="font-size:0.875rem;color:var(--gray-mid);margin-bottom:16px;">Radiology and pathology groups are among the most efficient IDR filers nationally because their claims are structurally similar and highly batchable. Radiology groups in particular have found significant success in the IDR process due to claim consistency and interpretable FAIR Health benchmarks.</p>
+          <div class="spec-body-grid">
+            <div class="spec-tip">
+              <h5>Key Documentation</h5>
+              <ul>
+                <li>CPT code specificity — ensure codes reflect actual service complexity (e.g., with vs. without contrast)</li>
+                <li>Subspecialty credentials (neuroradiology, musculoskeletal, interventional)</li>
+                <li>Academic affiliations and training</li>
+                <li>Interpretation quality metrics where available</li>
+                <li>Equipment and facility characteristics for technical component</li>
+              </ul>
+            </div>
+            <div class="spec-tip">
+              <h5>Batching Strategy</h5>
+              <ul>
+                <li>Group underpaid claims against same payer for same/similar CPT codes into batched disputes</li>
+                <li>Single administrative fee covers entire batch</li>
+                <li>Federal NSA batching rules require same payer + same/similar services</li>
+                <li>Dramatically reduces per-claim IDR cost — makes low-value claims worth pursuing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spec-item">
+        <button class="spec-header-btn">
+          <div class="spec-header-left">
+            <span class="spec-emoji-sm">🏥</span>
+            <div>
+              <div class="spec-header-title">Ambulatory Surgical Centers</div>
+              <div class="spec-header-sub">Facility fees separately disputable · High-value claims</div>
+            </div>
+          </div>
+          <span class="spec-chevron">▾</span>
+        </button>
+        <div class="spec-body">
+          <p style="font-size:0.875rem;color:var(--gray-mid);margin-bottom:16px;">ASC facility fees are separately disputable from physician fees. A single procedure may generate multiple eligible IDR claims: one from the surgeon, one from the anesthesiologist, and one from the facility. Each is independently arbitrable.</p>
+          <div class="spec-body-grid">
+            <div class="spec-tip">
+              <h5>Facility-Specific Factors</h5>
+              <ul>
+                <li>Accreditation status (AAAHC, Joint Commission)</li>
+                <li>Scope of services and case mix</li>
+                <li>Geographic market and regional facility rates</li>
+                <li>Staffing and equipment quality</li>
+                <li>Prior contracted rates with same payer if previously in-network</li>
+                <li>Under FSL § 605(e): if previously in-network, initial payment must be at least 25% above prior contracted rate</li>
+              </ul>
+            </div>
+            <div class="spec-tip">
+              <h5>Coordination with Physicians</h5>
+              <ul>
+                <li>Coordinate IDR filing timing with surgeon and anesthesiologist for same case</li>
+                <li>Consistent case complexity documentation benefits all parties</li>
+                <li>Consider joint credible information submission strategy</li>
+                <li>Batching available for multiple cases against same payer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="fees-section">
+  <div class="container">
+    <div class="section-eyebrow">Our Fee Structure</div>
+    <h2 class="section-title">No Recovery, No Fee</h2>
+    <p class="section-sub">We represent providers on contingency. There is no upfront cost, no retainer, and no hourly billing. Our interests are aligned with yours.</p>
+    <div class="fees-grid">
+      <div class="fee-card regular">
+        <div class="fee-title">Your Upfront Cost</div>
+        <div class="fee-amount">$0</div>
+        <div class="fee-desc">No retainer. No hourly fees. No upfront case costs. You pay nothing to start.</div>
+      </div>
+      <div class="fee-card highlight">
+        <div class="fee-title">Our Fee</div>
+        <div class="fee-amount">Contingency</div>
+        <div class="fee-desc">We earn a percentage of what we recover for you. If we don't recover, we don't get paid. We discuss the specific percentage during your free evaluation.</div>
+      </div>
+      <div class="fee-card regular">
+        <div class="fee-title">IDR Filing Fees</div>
+        <div class="fee-amount">Recoverable</div>
+        <div class="fee-desc">In most IDR disputes, the losing party pays the arbitration entity's fee. When providers win, the insurer bears this cost.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-bar">
+  <div class="container">
+    <h2>Ready to Find Out What You're Owed?</h2>
+    <p>Free case evaluation. We review your claims, identify the disputes, and tell you exactly what's recoverable under NY and federal law.</p>
+    <a href="/case-evaluator.html" class="btn-primary">Start Free Evaluation →</a>
+    <a href="tel:2123003191" class="btn-ghost">(212) 300-3191</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bottom">
+    <p class="footer-legal">Madison Law Firm PLLC · 579 Fifth Avenue, 2nd Floor, New York, NY 10017 · inquiries@madisonlawfirm.com. Attorney advertising. Prior results do not guarantee similar outcomes. NY IDR governed by Financial Services Law Article 6 and 23 NYCRR 400. Federal IDR governed by 42 U.S.C. §§ 300gg-111 et seq.</p>
+    <p class="footer-copy">© 2026 Madison Law Firm PLLC</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
+document.querySelectorAll('.spec-header-btn').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    const item=this.closest('.spec-item');
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.spec-item').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen)item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>
