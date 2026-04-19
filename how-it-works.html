@@ -16,7 +16,7 @@ html{scroll-behavior:smooth;}
 body{font-family:var(--sans);color:var(--gray-dark);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);}
 .nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:68px;}
-.nav-logo{font-family:var(--serif);font-size:1.55rem;color:var(--steel);text-decoration:none;letter-spacing:-0.01em;line-height:1.1;display:inline-flex;flex-direction:column;align-items:flex-start;}
+.nav-logo{font-family:var(--serif);font-size:1.55rem;color:var(--steel);text-decoration:none;letter-spacing:-0.01em;line-height:1.1;display:inline-flex;flex-direction:column;align-items:flex-start;}.nav-logo-brand{display:inline;}
 .nav-logo-ny{color:var(--steel-mid);}.nav-logo-sub{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--gray-mid);margin-top:1px;}
 .nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
 .nav-links a{font-size:0.875rem;font-weight:500;color:var(--gray-dark);text-decoration:none;transition:color 0.2s;}
@@ -130,7 +130,7 @@ footer{background:var(--charcoal);border-top:1px solid rgba(255,255,255,0.06);pa
 <body>
 <nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo">OutOfNetwork<span class="nav-logo-ny">NY</span><span class="nav-logo-sub">by Madison Law Firm PLLC</span></a>
+    <a href="/" class="nav-logo"><span class="nav-logo-brand">OutOfNetwork<span class="nav-logo-ny">NY</span></span><span class="nav-logo-sub">by Madison Law Firm PLLC</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="/for-providers.html">For Providers</a></li>
       <li><a href="/how-it-works.html">How It Works</a></li>
