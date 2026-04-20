@@ -16,8 +16,6 @@ html{scroll-behavior:smooth;}
 body{font-family:var(--sans);color:var(--gray-dark);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);}
 .nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:68px;}
-.nav-logo{font-family:var(--serif);font-size:1.2rem;color:var(--steel);text-decoration:none;}
-.nav-logo span{color:var(--steel-mid);}
 .nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
 .nav-links a{font-size:0.875rem;font-weight:500;color:var(--gray-dark);text-decoration:none;}
 .nav-cta{background:var(--steel);color:var(--white)!important;padding:9px 20px;border-radius:var(--radius);font-weight:600!important;}
@@ -71,12 +69,16 @@ footer{background:var(--charcoal);padding:24px;}
   .nav-links.open{display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:var(--white);padding:20px 24px;border-bottom:1px solid var(--border);gap:4px;}
   .portfolio-grid{grid-template-columns:1fr 1fr;}
 }
+.nav-logo{font-family:var(--serif);font-size:1.55rem;color:var(--steel);text-decoration:none;letter-spacing:-0.01em;line-height:1.1;display:inline-flex;flex-direction:column;align-items:flex-start;}
+.nav-logo-brand{display:inline;}
+.nav-logo-ny{color:var(--steel-mid);}
+.nav-logo-sub{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--gray-mid);margin-top:1px;}
 </style>
 </head>
 <body>
 <nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo">OutOfNetwork<span>NY</span></a>
+    <a href="/" class="nav-logo"><span class="nav-logo-brand">OutOfNetwork<span class="nav-logo-ny">NY</span></span><span class="nav-logo-sub">by Madison Law Firm PLLC</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="/for-providers.html">For Providers</a></li>
       <li><a href="/how-it-works.html">How It Works</a></li>
@@ -105,9 +107,9 @@ footer{background:var(--charcoal);padding:24px;}
           <div class="section-eyebrow">About the Firm</div>
           <h2 class="section-title">Experienced New York Attorneys. Provider-Focused OON Practice.</h2>
           <div class="about-body">
-            <p>Madison Law Firm PLLC is a New York-based law firm with a practice that spans personal injury, consumer protection, lemon law, rideshare litigation, and — increasingly — out-of-network reimbursement disputes for medical providers.</p>
+            <p>Madison Law Firm PLLC is a New York-based law firm with a practice that spans personal injury, consumer protection, lemon law, rideshare litigation, and â increasingly â out-of-network reimbursement disputes for medical providers.</p>
             <p>Our OON practice was built in response to a clear pattern: New York's out-of-network laws give providers meaningful legal rights to dispute inadequate payments, but most practices don't have the legal infrastructure to act on those rights. Insurance companies know this and systematically underpay claims at scale.</p>
-            <p>We represent OON providers on a contingency basis — no recovery, no fee — in both New York state IDR proceedings under Financial Services Law Article 6 and federal No Surprises Act arbitration under 42 U.S.C. § 300gg-111. Our focus is on physicians, surgeons, anesthesiologists, ambulatory surgical centers, and medical practices that bill out-of-network in New York.</p>
+            <p>We represent OON providers on a contingency basis â no recovery, no fee â in both New York state IDR proceedings under Financial Services Law Article 6 and federal No Surprises Act arbitration under 42 U.S.C. Â§ 300gg-111. Our focus is on physicians, surgeons, anesthesiologists, ambulatory surgical centers, and medical practices that bill out-of-network in New York.</p>
             <p>We are a small, focused firm. That means you get direct attorney attention on your matter, not a handoff to a paralegal. When you call our number, you reach someone who knows your case.</p>
           </div>
         </div>
@@ -128,7 +130,7 @@ footer{background:var(--charcoal);padding:24px;}
           </div>
           <div class="detail-row">
             <span class="detail-label">Hours</span>
-            <span class="detail-val">Monday – Friday, 9:00 AM – 6:00 PM ET</span>
+            <span class="detail-val">Monday â Friday, 9:00 AM â 6:00 PM ET</span>
           </div>
           <div class="detail-row">
             <span class="detail-label">Website</span>
@@ -175,7 +177,7 @@ footer{background:var(--charcoal);padding:24px;}
               <label>Message</label>
               <textarea name="description" placeholder="Brief description of your situation..."></textarea>
             </div>
-            <button type="submit" class="form-submit">Send Message →</button>
+            <button type="submit" class="form-submit">Send Message â</button>
           </form>
           <p class="privacy">Attorney advertising. No attorney-client relationship is formed by submitting this form. Madison Law Firm PLLC.</p>
         </div>
@@ -211,8 +213,8 @@ footer{background:var(--charcoal);padding:24px;}
 
 <footer>
   <div class="footer-bottom">
-    <p class="footer-legal">Madison Law Firm PLLC · 579 Fifth Avenue, 2nd Floor, New York, NY 10017 · (212) 300-3191 · inquiries@madisonlawfirm.com. Attorney advertising. Prior results do not guarantee similar outcomes. This website does not constitute legal advice and no attorney-client relationship is formed by use of this site.</p>
-    <p class="footer-copy">© 2026 Madison Law Firm PLLC</p>
+    <p class="footer-legal">Madison Law Firm PLLC Â· 579 Fifth Avenue, 2nd Floor, New York, NY 10017 Â· (212) 300-3191 Â· inquiries@madisonlawfirm.com. Attorney advertising. Prior results do not guarantee similar outcomes. This website does not constitute legal advice and no attorney-client relationship is formed by use of this site.</p>
+    <p class="footer-copy">Â© 2026 Madison Law Firm PLLC</p>
   </div>
 </footer>
 

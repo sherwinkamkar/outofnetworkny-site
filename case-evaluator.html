@@ -15,8 +15,6 @@
 body{font-family:var(--sans);color:var(--gray-dark);background:var(--off-white);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);}
 .nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:68px;}
-.nav-logo{font-family:var(--serif);font-size:1.2rem;color:var(--steel);text-decoration:none;}
-.nav-logo span{color:var(--steel-mid);}
 .nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
 .nav-links a{font-size:0.875rem;font-weight:500;color:var(--gray-dark);text-decoration:none;}
 .nav-cta{background:var(--steel);color:var(--white)!important;padding:9px 20px;border-radius:var(--radius);font-weight:600!important;}
@@ -65,12 +63,16 @@ footer{background:var(--charcoal);padding:24px;}
   .nav-links.open{display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:var(--white);padding:20px 24px;border-bottom:1px solid var(--border);gap:4px;}
   .option-grid{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}
 }
+.nav-logo{font-family:var(--serif);font-size:1.55rem;color:var(--steel);text-decoration:none;letter-spacing:-0.01em;line-height:1.1;display:inline-flex;flex-direction:column;align-items:flex-start;}
+.nav-logo-brand{display:inline;}
+.nav-logo-ny{color:var(--steel-mid);}
+.nav-logo-sub{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--gray-mid);margin-top:1px;}
 </style>
 </head>
 <body>
 <nav>
   <div class="nav-inner">
-    <a href="/" class="nav-logo">OutOfNetwork<span>NY</span></a>
+    <a href="/" class="nav-logo"><span class="nav-logo-brand">OutOfNetwork<span class="nav-logo-ny">NY</span></span><span class="nav-logo-sub">by Madison Law Firm PLLC</span></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="/for-providers.html">For Providers</a></li>
       <li><a href="/how-it-works.html">How It Works</a></li>
@@ -85,7 +87,7 @@ footer{background:var(--charcoal);padding:24px;}
 
 <div class="eval-wrap">
   <div class="eval-header">
-    <div class="eval-eyebrow">Free · No Obligation · No Recovery No Fee</div>
+    <div class="eval-eyebrow">Free Â· No Obligation Â· No Recovery No Fee</div>
     <h1>Evaluate Your OON Claims</h1>
     <p>Answer 6 quick questions. We'll review your situation and tell you what's potentially recoverable under New York and federal law.</p>
   </div>
@@ -113,16 +115,16 @@ footer{background:var(--charcoal);padding:24px;}
         <div class="step-label">Step 1 of 6</div>
         <div class="step-title">What type of provider are you?</div>
         <div class="option-grid">
-          <button type="button" class="option-btn" data-field="specialty" data-value="Plastic / Reconstructive Surgeon"><span class="opt-icon">🔬</span><span class="opt-label">Plastic / Reconstructive Surgeon</span></button>
-          <button type="button" class="option-btn" data-field="specialty" data-value="Anesthesiologist"><span class="opt-icon">💉</span><span class="opt-label">Anesthesiologist</span></button>
-          <button type="button" class="option-btn" data-field="specialty" data-value="Radiologist / Pathologist"><span class="opt-icon">📡</span><span class="opt-label">Radiologist / Pathologist</span></button>
-          <button type="button" class="option-btn" data-field="specialty" data-value="Orthopedic / Neuro Surgeon"><span class="opt-icon">🧠</span><span class="opt-label">Orthopedic / Neuro Surgeon</span></button>
-          <button type="button" class="option-btn" data-field="specialty" data-value="Emergency Medicine"><span class="opt-icon">🚑</span><span class="opt-label">Emergency Medicine</span></button>
-          <button type="button" class="option-btn" data-field="specialty" data-value="ASC / Hospital / Other"><span class="opt-icon">🏥</span><span class="opt-label">ASC / Hospital / Other</span></button>
+          <button type="button" class="option-btn" data-field="specialty" data-value="Plastic / Reconstructive Surgeon"><span class="opt-icon">ð¬</span><span class="opt-label">Plastic / Reconstructive Surgeon</span></button>
+          <button type="button" class="option-btn" data-field="specialty" data-value="Anesthesiologist"><span class="opt-icon">ð</span><span class="opt-label">Anesthesiologist</span></button>
+          <button type="button" class="option-btn" data-field="specialty" data-value="Radiologist / Pathologist"><span class="opt-icon">ð¡</span><span class="opt-label">Radiologist / Pathologist</span></button>
+          <button type="button" class="option-btn" data-field="specialty" data-value="Orthopedic / Neuro Surgeon"><span class="opt-icon">ð§ </span><span class="opt-label">Orthopedic / Neuro Surgeon</span></button>
+          <button type="button" class="option-btn" data-field="specialty" data-value="Emergency Medicine"><span class="opt-icon">ð</span><span class="opt-label">Emergency Medicine</span></button>
+          <button type="button" class="option-btn" data-field="specialty" data-value="ASC / Hospital / Other"><span class="opt-icon">ð¥</span><span class="opt-label">ASC / Hospital / Other</span></button>
         </div>
         <div class="step-nav">
           <span class="step-counter">1 of 6</span>
-          <button type="button" class="btn-next" id="next1" disabled>Next →</button>
+          <button type="button" class="btn-next" id="next1" disabled>Next â</button>
         </div>
       </div>
 
@@ -131,15 +133,15 @@ footer{background:var(--charcoal);padding:24px;}
         <div class="step-label">Step 2 of 6</div>
         <div class="step-title">What type of insurance plan covers most of the disputed claims?</div>
         <div class="option-grid">
-          <button type="button" class="option-btn" data-field="plan_type" data-value="Fully insured NY plan (BCBS, Aetna, etc.)"><span class="opt-icon">📋</span><span class="opt-label">Fully Insured NY Plan</span><span class="opt-sub">BCBS, Aetna, UHC, Cigna, etc.</span></button>
-          <button type="button" class="option-btn" data-field="plan_type" data-value="Self-funded employer plan (ERISA)"><span class="opt-icon">🏢</span><span class="opt-label">Self-Funded Employer Plan</span><span class="opt-sub">Large employer pays claims directly</span></button>
-          <button type="button" class="option-btn" data-field="plan_type" data-value="Mix of both"><span class="opt-icon">⚖️</span><span class="opt-label">Mix of Both</span><span class="opt-sub">Different patients, different plans</span></button>
-          <button type="button" class="option-btn" data-field="plan_type" data-value="Not sure"><span class="opt-icon">❓</span><span class="opt-label">Not Sure</span><span class="opt-sub">We can help identify this</span></button>
+          <button type="button" class="option-btn" data-field="plan_type" data-value="Fully insured NY plan (BCBS, Aetna, etc.)"><span class="opt-icon">ð</span><span class="opt-label">Fully Insured NY Plan</span><span class="opt-sub">BCBS, Aetna, UHC, Cigna, etc.</span></button>
+          <button type="button" class="option-btn" data-field="plan_type" data-value="Self-funded employer plan (ERISA)"><span class="opt-icon">ð¢</span><span class="opt-label">Self-Funded Employer Plan</span><span class="opt-sub">Large employer pays claims directly</span></button>
+          <button type="button" class="option-btn" data-field="plan_type" data-value="Mix of both"><span class="opt-icon">âï¸</span><span class="opt-label">Mix of Both</span><span class="opt-sub">Different patients, different plans</span></button>
+          <button type="button" class="option-btn" data-field="plan_type" data-value="Not sure"><span class="opt-icon">â</span><span class="opt-label">Not Sure</span><span class="opt-sub">We can help identify this</span></button>
         </div>
         <div class="step-nav">
-          <button type="button" class="btn-back" id="back2">← Back</button>
+          <button type="button" class="btn-back" id="back2">â Back</button>
           <span class="step-counter">2 of 6</span>
-          <button type="button" class="btn-next" id="next2" disabled>Next →</button>
+          <button type="button" class="btn-next" id="next2" disabled>Next â</button>
         </div>
       </div>
 
@@ -149,14 +151,14 @@ footer{background:var(--charcoal);padding:24px;}
         <div class="step-title">How old are the underpaid claims you want to dispute?</div>
         <div class="option-grid">
           <button type="button" class="option-btn" data-field="claim_age" data-value="Last 6 months"><span class="opt-label">Last 6 months</span><span class="opt-sub">Recent underpayments</span></button>
-          <button type="button" class="option-btn" data-field="claim_age" data-value="6–18 months"><span class="opt-label">6–18 months</span><span class="opt-sub">Still within federal + NY windows</span></button>
-          <button type="button" class="option-btn" data-field="claim_age" data-value="18 months – 3 years"><span class="opt-label">18 months – 3 years</span><span class="opt-sub">NY state IDR window may apply</span></button>
+          <button type="button" class="option-btn" data-field="claim_age" data-value="6â18 months"><span class="opt-label">6â18 months</span><span class="opt-sub">Still within federal + NY windows</span></button>
+          <button type="button" class="option-btn" data-field="claim_age" data-value="18 months â 3 years"><span class="opt-label">18 months â 3 years</span><span class="opt-sub">NY state IDR window may apply</span></button>
           <button type="button" class="option-btn" data-field="claim_age" data-value="Mix / Ongoing"><span class="opt-label">Mix / Ongoing</span><span class="opt-sub">Range of claim dates</span></button>
         </div>
         <div class="step-nav">
-          <button type="button" class="btn-back" id="back3">← Back</button>
+          <button type="button" class="btn-back" id="back3">â Back</button>
           <span class="step-counter">3 of 6</span>
-          <button type="button" class="btn-next" id="next3" disabled>Next →</button>
+          <button type="button" class="btn-next" id="next3" disabled>Next â</button>
         </div>
       </div>
 
@@ -165,15 +167,15 @@ footer{background:var(--charcoal);padding:24px;}
         <div class="step-label">Step 4 of 6</div>
         <div class="step-title">Have you previously appealed any of these underpayments?</div>
         <div class="option-grid" style="grid-template-columns:1fr 1fr;">
-          <button type="button" class="option-btn" data-field="prior_appeal" data-value="No — never disputed"><span class="opt-icon">❌</span><span class="opt-label">No — Never Disputed</span><span class="opt-sub">Accepted insurer's payment</span></button>
-          <button type="button" class="option-btn" data-field="prior_appeal" data-value="Yes — internal appeal only"><span class="opt-icon">📝</span><span class="opt-label">Internal Appeal Only</span><span class="opt-sub">Filed appeal with insurer</span></button>
-          <button type="button" class="option-btn" data-field="prior_appeal" data-value="Yes — attempted IDR"><span class="opt-icon">⚖️</span><span class="opt-label">Attempted IDR</span><span class="opt-sub">Filed but not resolved favorably</span></button>
-          <button type="button" class="option-btn" data-field="prior_appeal" data-value="In process now"><span class="opt-icon">🔄</span><span class="opt-label">In Process Now</span><span class="opt-sub">Need help managing existing dispute</span></button>
+          <button type="button" class="option-btn" data-field="prior_appeal" data-value="No â never disputed"><span class="opt-icon">â</span><span class="opt-label">No â Never Disputed</span><span class="opt-sub">Accepted insurer's payment</span></button>
+          <button type="button" class="option-btn" data-field="prior_appeal" data-value="Yes â internal appeal only"><span class="opt-icon">ð</span><span class="opt-label">Internal Appeal Only</span><span class="opt-sub">Filed appeal with insurer</span></button>
+          <button type="button" class="option-btn" data-field="prior_appeal" data-value="Yes â attempted IDR"><span class="opt-icon">âï¸</span><span class="opt-label">Attempted IDR</span><span class="opt-sub">Filed but not resolved favorably</span></button>
+          <button type="button" class="option-btn" data-field="prior_appeal" data-value="In process now"><span class="opt-icon">ð</span><span class="opt-label">In Process Now</span><span class="opt-sub">Need help managing existing dispute</span></button>
         </div>
         <div class="step-nav">
-          <button type="button" class="btn-back" id="back4">← Back</button>
+          <button type="button" class="btn-back" id="back4">â Back</button>
           <span class="step-counter">4 of 6</span>
-          <button type="button" class="btn-next" id="next4" disabled>Next →</button>
+          <button type="button" class="btn-next" id="next4" disabled>Next â</button>
         </div>
       </div>
 
@@ -183,21 +185,21 @@ footer{background:var(--charcoal);padding:24px;}
         <div class="step-title">Approximately what is the total amount underpaid across the claims you want to dispute?</div>
         <div class="option-grid" style="grid-template-columns:1fr 1fr;">
           <button type="button" class="option-btn" data-field="claim_value" data-value="Under $10,000"><span class="opt-label">Under $10,000</span></button>
-          <button type="button" class="option-btn" data-field="claim_value" data-value="$10,000 – $50,000"><span class="opt-label">$10,000 – $50,000</span></button>
-          <button type="button" class="option-btn" data-field="claim_value" data-value="$50,000 – $250,000"><span class="opt-label">$50,000 – $250,000</span></button>
+          <button type="button" class="option-btn" data-field="claim_value" data-value="$10,000 â $50,000"><span class="opt-label">$10,000 â $50,000</span></button>
+          <button type="button" class="option-btn" data-field="claim_value" data-value="$50,000 â $250,000"><span class="opt-label">$50,000 â $250,000</span></button>
           <button type="button" class="option-btn" data-field="claim_value" data-value="Over $250,000"><span class="opt-label">Over $250,000</span></button>
         </div>
         <div class="step-nav">
-          <button type="button" class="btn-back" id="back5">← Back</button>
+          <button type="button" class="btn-back" id="back5">â Back</button>
           <span class="step-counter">5 of 6</span>
-          <button type="button" class="btn-next" id="next5" disabled>Next →</button>
+          <button type="button" class="btn-next" id="next5" disabled>Next â</button>
         </div>
       </div>
 
       <!-- STEP 6 -->
       <div class="step" id="step6">
-        <div class="step-label">Step 6 of 6 — Your Contact Information</div>
-        <div class="step-title">Almost done — how should we reach you?</div>
+        <div class="step-label">Step 6 of 6 â Your Contact Information</div>
+        <div class="step-title">Almost done â how should we reach you?</div>
         <div class="form-row">
           <div class="form-group">
             <label for="eval_name">Your Name *</label>
@@ -230,14 +232,14 @@ footer{background:var(--charcoal);padding:24px;}
           <label for="eval_calltime">Best Time to Call</label>
           <select id="eval_calltime" name="best_call_time">
             <option value="">Select a preference</option>
-            <option>Morning (9am – 12pm)</option>
-            <option>Afternoon (12pm – 4pm)</option>
-            <option>Evening (4pm – 6pm)</option>
+            <option>Morning (9am â 12pm)</option>
+            <option>Afternoon (12pm â 4pm)</option>
+            <option>Evening (4pm â 6pm)</option>
           </select>
         </div>
         <div class="step-nav">
-          <button type="button" class="btn-back" id="back6">← Back</button>
-          <button type="submit" class="btn-next" id="submitBtn">Submit Evaluation →</button>
+          <button type="button" class="btn-back" id="back6">â Back</button>
+          <button type="submit" class="btn-next" id="submitBtn">Submit Evaluation â</button>
         </div>
       </div>
 
@@ -245,13 +247,13 @@ footer{background:var(--charcoal);padding:24px;}
     </form>
   </div>
 
-  <p style="font-size:0.72rem;color:var(--gray-mid);text-align:center;margin-top:16px;line-height:1.5;">Attorney advertising. Submission of this form does not create an attorney-client relationship. Madison Law Firm PLLC · 579 Fifth Avenue, 2nd Floor, New York, NY 10017</p>
+  <p style="font-size:0.72rem;color:var(--gray-mid);text-align:center;margin-top:16px;line-height:1.5;">Attorney advertising. Submission of this form does not create an attorney-client relationship. Madison Law Firm PLLC Â· 579 Fifth Avenue, 2nd Floor, New York, NY 10017</p>
 </div>
 
 <footer>
   <div class="footer-bottom">
-    <p class="footer-legal">Madison Law Firm PLLC · 579 Fifth Avenue, 2nd Floor, New York, NY 10017 · inquiries@madisonlawfirm.com. Attorney advertising. Prior results do not guarantee similar outcomes.</p>
-    <p class="footer-copy">© 2026 Madison Law Firm PLLC</p>
+    <p class="footer-legal">Madison Law Firm PLLC Â· 579 Fifth Avenue, 2nd Floor, New York, NY 10017 Â· inquiries@madisonlawfirm.com. Attorney advertising. Prior results do not guarantee similar outcomes.</p>
+    <p class="footer-copy">Â© 2026 Madison Law Firm PLLC</p>
   </div>
 </footer>
 
