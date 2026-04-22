@@ -90,6 +90,7 @@ footer{background:var(--charcoal);padding:24px;}
       body{padding-top:38px;}
     }
 </style>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
@@ -205,7 +206,16 @@ footer{background:var(--charcoal);padding:24px;}
               <label>Message</label>
               <textarea name="description" placeholder="Brief description of your situation..."></textarea>
             </div>
-            <button type="submit" class="form-submit">Send Message →</button>
+            
+        <!-- Spam protection — Turnstile + honeypot (added by patch_forms.py) -->
+        <div data-spam-protection="turnstile-honeypot-v1" style="margin:12px 0;">
+          <div class="cf-turnstile" data-sitekey="TURNSTILE_SITE_KEY_REPLACE_ME" data-theme="auto"></div>
+        </div>
+        <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;" tabindex="-1">
+          <label for="company_website_hp">Leave this field empty (anti-spam)</label>
+          <input type="text" name="company_website" id="company_website_hp" tabindex="-1" autocomplete="off" value="">
+        </div>
+        <button type="submit" class="form-submit">Send Message →</button>
           </form>
           <p class="privacy">Attorney advertising. No attorney-client relationship is formed by submitting this form. Madison Law Firm PLLC.</p>
         </div>
