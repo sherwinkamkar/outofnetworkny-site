@@ -1,370 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- oon v3 · Madison design system · content verified November 5, 2026 -->
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Case Evaluation | OutOfNetworkNY</title>
-<meta name="description" content="Get a free evaluation of your out-of-network reimbursement claims. We identify NY IDR and federal NSA arbitration opportunities. No recovery, no fee.">
-<link rel="canonical" href="https://www.outofnetworkny.com/case-evaluator.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<title>Free Out-of-Network Claims Review | OutOfNetworkNY</title>
+<meta name="description" content="Request a free review of your out-of-network claims. An attorney will tell you which claims may qualify for New York IDR or federal No Surprises Act arbitration.">
+<link rel="canonical" href="https://www.outofnetworkny.com/case-evaluator">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#012633">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OutOfNetworkNY · Madison Law Firm PLLC">
+<meta property="og:title" content="Free Out-of-Network Claims Review | OutOfNetworkNY">
+<meta property="og:description" content="Request a free review of your out-of-network claims. An attorney will tell you which claims may qualify for New York IDR or federal No Surprises Act arbitration.">
+<meta property="og:url" content="https://www.outofnetworkny.com/case-evaluator">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Libre+Baskerville:wght@700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v3-20261105">
 <style>
-:root{--white:#FFFFFF;--off-white:#F8FAFB;--steel:#1B4F72;--steel-mid:#2E86AB;--steel-light:#EBF4F8;--charcoal:#0F1923;--gray-dark:#374151;--gray-mid:#6B7280;--gray-light:#F3F6F9;--gold:#C9A84C;--border:#D9E6EE;--serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;--radius:4px;}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--sans);color:var(--gray-dark);background:var(--off-white);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(8px);}
-.nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:68px;}
-.nav-logo{font-family:var(--serif);font-size:1.55rem;color:var(--steel);text-decoration:none;letter-spacing:-0.01em;line-height:1.1;display:inline-flex;flex-direction:column;align-items:flex-start;}.nav-logo-brand{display:inline;}.nav-logo-ny{color:var(--steel-mid);}.nav-logo-sub{font-family:var(--sans);font-size:0.6rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:var(--gray-mid);margin-top:1px;}
-
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
-.nav-links a{font-size:0.875rem;font-weight:500;color:var(--gray-dark);text-decoration:none;}
-.nav-cta{background:var(--steel);color:var(--white)!important;padding:9px 20px;border-radius:var(--radius);font-weight:600!important;}
-.hamburger{display:none;cursor:pointer;background:none;border:none;padding:4px;}
-.hamburger span{display:block;width:22px;height:2px;background:var(--charcoal);margin:5px 0;}
-/* EVALUATOR */
-.eval-wrap{max-width:680px;margin:0 auto;padding:112px 24px 80px;}
-.eval-header{text-align:center;margin-bottom:40px;}
-.eval-eyebrow{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel-mid);margin-bottom:12px;}
-.eval-header h1{font-family:var(--serif);font-size:2.2rem;color:var(--charcoal);letter-spacing:-0.02em;margin-bottom:12px;}
-.eval-header p{font-size:0.95rem;color:var(--gray-mid);line-height:1.6;}
-/* STEPS */
-.step{display:none;}
-.step.active{display:block;}
-.step-progress{display:flex;gap:6px;margin-bottom:32px;}
-.step-dot{height:4px;border-radius:2px;flex:1;background:var(--border);transition:background 0.3s;}
-.step-dot.done{background:var(--steel-mid);}
-.step-label{font-size:0.72rem;color:var(--gray-mid);margin-bottom:16px;}
-.step-title{font-family:var(--serif);font-size:1.4rem;color:var(--charcoal);margin-bottom:24px;line-height:1.3;}
-.option-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.option-btn{padding:16px 20px;background:var(--white);border:2px solid var(--border);border-radius:6px;cursor:pointer;text-align:left;font-family:var(--sans);font-size:0.875rem;font-weight:500;color:var(--gray-dark);transition:all 0.15s;}
-.option-btn:hover{border-color:var(--steel-mid);color:var(--charcoal);}
-.option-btn.selected{border-color:var(--steel-mid);background:var(--steel-light);color:var(--steel);}
-.option-btn .opt-icon{font-size:1.1rem;margin-bottom:6px;display:block;}
-.option-btn .opt-label{display:block;font-weight:600;}
-.option-btn .opt-sub{display:block;font-size:0.78rem;color:var(--gray-mid);margin-top:3px;}
-.form-group{margin-bottom:16px;}
-.form-group label{display:block;font-size:0.8rem;font-weight:600;color:var(--gray-dark);margin-bottom:6px;}
-.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1px solid var(--border);border-radius:var(--radius);font-family:var(--sans);font-size:0.875rem;color:var(--charcoal);transition:border-color 0.2s;}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--steel-mid);box-shadow:0 0 0 3px rgba(46,134,171,0.1);}
-.form-group textarea{resize:vertical;min-height:80px;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.step-nav{display:flex;gap:12px;margin-top:24px;justify-content:space-between;align-items:center;}
-.btn-next{background:var(--steel);color:var(--white);padding:12px 28px;border:none;border-radius:var(--radius);font-family:var(--sans);font-size:0.9rem;font-weight:600;cursor:pointer;transition:background 0.2s;}
-.btn-next:hover{background:var(--charcoal);}
-.btn-back{background:none;color:var(--gray-mid);padding:12px 20px;border:none;font-family:var(--sans);font-size:0.875rem;cursor:pointer;}
-.step-counter{font-size:0.78rem;color:var(--gray-mid);}
-.eval-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:32px;}
-/* Footer */
-footer{background:var(--charcoal);padding:24px;}
-.footer-bottom{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-.footer-legal{font-size:0.72rem;color:rgba(255,255,255,0.3);line-height:1.6;max-width:580px;}
-.footer-copy{font-size:0.75rem;color:rgba(255,255,255,0.3);}
-@media(max-width:768px){
-  .nav-links{display:none;}.hamburger{display:block;}
-  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:var(--white);padding:20px 24px;border-bottom:1px solid var(--border);gap:4px;}
-  .option-grid{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}
-}
-
-    /* Top phone bar (fixed, above nav) */
-    .topbar{position:fixed;top:0;left:0;right:0;z-index:101;background:var(--charcoal);color:#fff;border-bottom:2px solid var(--gold);font-family:var(--sans);}
-    .topbar-inner{max-width:1200px;margin:0 auto;padding:8px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;}
-    .topbar-tagline{font-size:0.78rem;letter-spacing:0.04em;color:rgba(255,255,255,0.75);text-transform:uppercase;font-weight:500;}
-    .topbar-phone{display:inline-flex;align-items:center;gap:7px;color:#fff;text-decoration:none;font-size:0.95rem;font-weight:600;letter-spacing:0.01em;transition:color 0.15s ease;}
-    .topbar-phone:hover{color:var(--gold);}
-    .topbar-phone-icon{color:var(--gold);flex-shrink:0;}
-    /* Push the existing fixed nav below the topbar and body content below both */
-    nav{top:42px !important;}
-    body{padding-top:42px;}
-    @media(max-width:600px){
-      .topbar-tagline{display:none;}
-      .topbar-inner{justify-content:center;padding:7px 16px;}
-      .topbar-phone{font-size:0.9rem;}
-      nav{top:38px !important;}
-      body{padding-top:38px;}
-    }
+#ada-skip-link{position:absolute;top:-60px;left:8px;z-index:999999;background:#0e1b2e;color:#fff;padding:10px 18px;font-size:14px;font-weight:700;border-radius:0 0 6px 6px;text-decoration:none;transition:top .2s}
+#ada-skip-link:focus{top:0}
+#ada-toolbar-wrap{position:fixed;bottom:24px;left:24px;z-index:99999;font-family:Arial,sans-serif}
+#ada-toggle-btn{background:#0e1b2e;color:#fff;border:none;cursor:pointer;padding:0;border-radius:50%;width:48px;height:48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-size:10px;line-height:1.2;letter-spacing:.03em;box-shadow:0 2px 12px rgba(0,0,0,.3);transition:background .2s}
+#ada-toggle-btn:hover{background:#b8965a}
+#ada-toggle-btn svg{width:20px;height:20px}
+#ada-panel{background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 -4px 24px rgba(0,0,0,.15);width:240px;overflow:hidden;display:none;flex-direction:column;position:absolute;bottom:56px;left:0}
+#ada-panel.open{display:flex}
+.ada-panel-inner{padding:14px 12px;width:240px;box-sizing:border-box}
+.ada-title{font-size:12px;font-weight:700;color:#0e1b2e;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;padding-bottom:8px;border-bottom:2px solid #b8965a;display:flex;align-items:center;gap:6px}
+.ada-section{margin-bottom:12px}
+.ada-section-label{font-size:10px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+.ada-btn-row{display:flex;gap:6px;flex-wrap:wrap}
+.ada-btn{flex:1 1 0;min-width:60px;background:#f3f4f6;border:1.5px solid #e5e7eb;border-radius:6px;padding:7px 6px;font-size:11px;font-weight:600;color:#374151;cursor:pointer;transition:.18s;text-align:center;line-height:1.3}
+.ada-btn:hover{background:#f5f0e8;border-color:#b8965a;color:#b8965a}
+.ada-btn.active{background:#0e1b2e;border-color:#0e1b2e;color:#fff}
+.ada-btn-full{width:100%;background:#f3f4f6;border:1.5px solid #e5e7eb;border-radius:6px;padding:8px 10px;font-size:11px;font-weight:600;color:#374151;cursor:pointer;transition:.18s;text-align:left;display:flex;align-items:center;gap:8px;line-height:1.3;margin-bottom:4px}
+.ada-btn-full:hover{background:#f5f0e8;border-color:#b8965a;color:#b8965a}
+.ada-btn-full.active{background:#0e1b2e;border-color:#0e1b2e;color:#fff}
+.ada-reset{width:100%;background:#fef2f2;border:1.5px solid #fca5a5;border-radius:6px;padding:8px 10px;font-size:11px;font-weight:700;color:#991b1b;cursor:pointer;transition:.18s;margin-top:4px}
+.ada-reset:hover{background:#fee2e2}
+#ada-reading-guide-line{display:none;position:fixed;left:0;width:100%;height:28px;background:rgba(14,27,46,.1);border-top:2px solid rgba(14,27,46,.4);border-bottom:2px solid rgba(14,27,46,.4);pointer-events:none;z-index:99998}
+body.ada-reading-guide #ada-reading-guide-line{display:block}
+body.ada-high-contrast,body.ada-high-contrast *{background-color:#000!important;color:#fff!important;border-color:#fff!important}
+body.ada-high-contrast a,body.ada-high-contrast a *{color:#ff0!important}
+body.ada-inverted{filter:invert(100%) hue-rotate(180deg)!important}
+body.ada-inverted img,body.ada-inverted video{filter:invert(100%) hue-rotate(180deg)!important}
+body.ada-dyslexia,body.ada-dyslexia *{font-family:OpenDyslexic,"Comic Sans MS",Arial,sans-serif!important;letter-spacing:.05em!important;word-spacing:.1em!important}
+body.ada-highlight-links a{background:#ff0!important;color:#000!important;text-decoration:underline!important;outline:2px solid #000!important;padding:0 2px!important}
+body.ada-pause-anim *,body.ada-pause-anim ::before,body.ada-pause-anim ::after{animation-play-state:paused!important;transition:none!important}
+body.ada-focus-visible :focus{outline:3px solid #b8965a!important;outline-offset:3px!important;box-shadow:0 0 0 5px rgba(184,150,90,.3)!important}
+body.ada-reading-guide *{cursor:none!important}
+body.ada-letter-space *{letter-spacing:.12em!important}
+body.ada-line-height *{line-height:1.9!important}
 </style>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "LegalService",
+    "LocalBusiness"
+   ],
+   "@id": "https://www.outofnetworkny.com/#firm",
+   "name": "Madison Law Firm PLLC",
+   "alternateName": "OutOfNetworkNY",
+   "url": "https://www.outofnetworkny.com/",
+   "telephone": "+12123003191",
+   "email": "inquiries@madisonlawfirm.com",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "579 Fifth Avenue, 2nd Floor",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "postalCode": "10017",
+    "addressCountry": "US"
+   },
+   "areaServed": {
+    "@type": "State",
+    "name": "New York"
+   },
+   "sameAs": [
+    "https://www.madisonlawfirm.com/surprise-billing-arbitration"
+   ]
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://www.outofnetworkny.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Free Claims Review",
+     "item": "https://www.outofnetworkny.com/case-evaluator"
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
-
-<!-- TOPBAR -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <span class="topbar-tagline">Free consultation — no recovery, no fee</span>
-    <a href="tel:+12123003191" class="topbar-phone" aria-label="Call Madison Law Firm">
-      <svg class="topbar-phone-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <span>(212) 300-3191</span>
-    </a>
+<header class="site-header"><div class="wrap">
+  <a href="/" class="brand" aria-label="OutOfNetworkNY by Madison Law Firm PLLC, home"><span class="oon-logo"><span class="oon-brand">OutOfNetwork<span class="oon-ny">NY</span></span><span class="oon-sub">by Madison Law Firm PLLC</span></span></a>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  <ul class="nav" id="site-nav">
+    <li><a href="/for-providers">For Providers</a></li><li><a href="/how-it-works">How It Works</a></li><li><a href="/case-types">Case Types</a></li><li><a href="/faq">FAQ</a></li><li><a href="/free-guide">Free Guide</a></li><li><a href="/contact">Contact</a></li><li><a href="/case-evaluator" class="cta">Free claims review</a></li>
+  </ul>
+  <ul class="nav-right"><li><a href="tel:+12123003191">(212) 300-3191</a></li></ul>
+</div></header>
+<main id="main-content">
+<section class="hero-band landing"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Free Claims Review</nav>
+  <h1><span class="h1-kicker">Free claims review</span> Tell us about your out-of-network claims.</h1><p class="dek">Answer a few questions and an attorney will follow up within one business day with a candid read on which claims may qualify, and which do not.</p>
+</div></section>
+<section class="section mist"><div class="wrap"><div class="contact-grid"><div class="contact-info">
+      <div class="kicker">Contact</div>
+      <h2 class="h2">What happens next</h2>
+      <p>We review your answers, call or email you within one business day, and ask for a de-identified claims export if your claims look eligible. The review is free. Please do not include patient names, dates of birth, member IDs, or other patient information. We send a business associate agreement before we receive any claim data.</p>
+      <ul class="cd">
+        <li><span class="l">Phone</span><a href="tel:+12123003191">(212) 300-3191</a></li>
+        <li><span class="l">Email</span><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#113;&#117;&#105;&#114;&#105;&#101;&#115;&#64;&#109;&#97;&#100;&#105;&#115;&#111;&#110;&#108;&#97;&#119;&#102;&#105;&#114;&#109;&#46;&#99;&#111;&#109;">&#105;&#110;&#113;&#117;&#105;&#114;&#105;&#101;&#115;&#64;&#109;&#97;&#100;&#105;&#115;&#111;&#110;&#108;&#97;&#119;&#102;&#105;&#114;&#109;&#46;&#99;&#111;&#109;</a></li>
+        <li><span class="l">Office</span><span>579 Fifth Avenue, 2nd Floor<br>New York, NY 10017</span></li>
+        <li><span class="l">Hours</span><span>Monday &ndash; Friday, 9:00 AM &ndash; 6:00 PM<br>After-hours by appointment</span></li>
+      </ul>
+    </div>
+<div class="contact-form"><h3>Claims review</h3><p class="form-sub">All fields except the description are required.</p>
+<form id="evalForm" action="https://outofnetworkny.com/submit" method="POST">
+  <input type="hidden" name="form_type" value="case_evaluation">
+  <input type="hidden" name="source_site" value="outofnetworkny.com">
+  <div class="form-group"><label for="e_spec">Specialty</label><select id="e_spec" name="specialty" required><option value="">Select…</option><option value="plastic-reconstructive">Plastic &amp; reconstructive surgery</option><option value="anesthesiology">Anesthesiology</option><option value="assistant-surgeon">Assistant surgery</option><option value="emergency-medicine">Emergency medicine</option><option value="orthopedic-surgery">Orthopedic &amp; hand surgery</option><option value="neurosurgery-spine">Neurosurgery / spine</option><option value="general-surgery">General, trauma &amp; vascular surgery</option><option value="radiology">Radiology</option><option value="pathology">Pathology &amp; laboratory</option><option value="neonatology">Neonatology</option><option value="hospitalist-intensivist">Hospitalist / intensivist</option><option value="ionm">Neuromonitoring (IONM)</option><option value="asc-facility">Ambulatory surgery center / facility</option><option value="other">Other</option></select></div>
+  <div class="form-group"><label for="e_plan">Patients&rsquo; coverage on the claims</label><select id="e_plan" name="plan_type" required><option value="">Select…</option><option value="fully-insured-ny">Fully insured New York plan</option><option value="self-funded-erisa">Self-funded employer plan</option><option value="out-of-state">Plan issued outside New York</option><option value="state-plan">Empire Plan / SEHP</option><option value="medicare-advantage">Medicare or Medicare Advantage</option><option value="medicaid">Medicaid or Medicaid managed care</option><option value="mixed">A mix of plan types</option><option value="unknown">Not sure</option></select></div>
+  <div class="form-row">
+    <div class="form-group"><label for="e_age">When were the claims paid or denied?</label><select id="e_age" name="claim_age" required><option value="">Select…</option><option value="under-90-days">Paid or denied in the last 90 days</option><option value="3-12-months">3 to 12 months ago</option><option value="1-3-years">1 to 3 years ago</option><option value="3-6-years">3 to 6 years ago</option><option value="mixed">A mix</option></select></div>
+    <div class="form-group"><label for="e_prior">Any dispute so far?</label><select id="e_prior" name="prior_appeal" required><option value="">Select…</option><option value="none">No dispute yet</option><option value="appealed">Internal appeal with the plan</option><option value="negotiation">Federal open negotiation started</option><option value="filed-idr">IDR filed</option><option value="award-unpaid">Won an award that has not been paid</option></select></div>
   </div>
-</div>
-
-<nav>
-  <div class="nav-inner">
-    <a href="/" class="nav-logo"><span class="nav-logo-brand">OutOfNetwork<span class="nav-logo-ny">NY</span></span><span class="nav-logo-sub">by Madison Law Firm PLLC</span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="/for-providers.html">For Providers</a></li>
-      <li><a href="/how-it-works.html">How It Works</a></li>
-      <li><a href="/case-types.html">Case Types</a></li>
-      <li><a href="/faq.html">FAQ</a></li>
-      <li><a href="/free-guide.html">Free Guide</a></li>
-      <li><a href="/case-evaluator.html" class="nav-cta">Free Evaluation</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  <div class="form-row">
+    <div class="form-group"><label for="e_val">Approximate unpaid balance</label><select id="e_val" name="claim_value" required><option value="">Select…</option><option value="under-50k">Under $50,000</option><option value="50k-250k">$50,000 to $250,000</option><option value="250k-1m">$250,000 to $1,000,000</option><option value="over-1m">Over $1,000,000</option><option value="unknown">Not sure</option></select></div>
+    <div class="form-group"><label for="e_payer">Main payers</label><input id="e_payer" type="text" name="payer_name" placeholder="e.g., Aetna, Cigna, UHC" required></div>
   </div>
-</nav>
-
-<div class="eval-wrap">
-  <div class="eval-header">
-    <div class="eval-eyebrow">Free · No Obligation · No Recovery No Fee</div>
-    <h1>Evaluate Your OON Claims</h1>
-    <p>Answer 6 quick questions. We'll review your situation and tell you what's potentially recoverable under New York and federal law.</p>
+  <div class="form-group"><label for="e_prac">Practice or group</label><input id="e_prac" type="text" name="practice_name" autocomplete="organization" required></div>
+  <div class="form-group"><label for="e_name">Your name</label><input id="e_name" type="text" name="name" autocomplete="name" required></div>
+  <div class="form-row">
+    <div class="form-group"><label for="e_phone">Phone</label><input id="e_phone" type="tel" name="phone" autocomplete="tel" required></div>
+    <div class="form-group"><label for="e_email">Email</label><input id="e_email" type="email" name="email" autocomplete="email" required></div>
   </div>
-
-  <div class="eval-card">
-    <form id="evalForm" action="https://outofnetworkny.com/submit" method="POST">
-      <input type="hidden" name="form_type" value="case_evaluation">
-      <input type="hidden" name="source_site" value="outofnetworkny.com">
-      <input type="hidden" name="specialty" id="hid_specialty" value="">
-      <input type="hidden" name="plan_type" id="hid_plan_type" value="">
-      <input type="hidden" name="claim_age" id="hid_claim_age" value="">
-      <input type="hidden" name="prior_appeal" id="hid_prior_appeal" value="">
-
-      <div class="step-progress">
-        <div class="step-dot done" id="dot1"></div>
-        <div class="step-dot" id="dot2"></div>
-        <div class="step-dot" id="dot3"></div>
-        <div class="step-dot" id="dot4"></div>
-        <div class="step-dot" id="dot5"></div>
-        <div class="step-dot" id="dot6"></div>
-      </div>
-
-      <!-- STEP 1 -->
-      <div class="step active" id="step1">
-        <div class="step-label">Step 1 of 6</div>
-        <div class="step-title">What type of provider are you?</div>
-        <div class="option-grid">
-          <button type="button" class="option-btn" data-field="specialty" data-value="Plastic / Reconstructive Surgeon"><span class="opt-icon">🔬</span><span class="opt-label">Plastic / Reconstructive Surgeon</span></button>
-          <button type="button" class="option-btn" data-field="specialty" data-value="Anesthesiologist"><span class="opt-icon">💉</span><span class="opt-label">Anesthesiologist</span></button>
-          <button type="button" class="option-btn" data-field="specialty" data-value="Radiologist / Pathologist"><span class="opt-icon">📡</span><span class="opt-label">Radiologist / Pathologist</span></button>
-          <button type="button" class="option-btn" data-field="specialty" data-value="Orthopedic / Neuro Surgeon"><span class="opt-icon">🧠</span><span class="opt-label">Orthopedic / Neuro Surgeon</span></button>
-          <button type="button" class="option-btn" data-field="specialty" data-value="Emergency Medicine"><span class="opt-icon">🚑</span><span class="opt-label">Emergency Medicine</span></button>
-          <button type="button" class="option-btn" data-field="specialty" data-value="ASC / Hospital / Other"><span class="opt-icon">🏥</span><span class="opt-label">ASC / Hospital / Other</span></button>
-        </div>
-        <div class="step-nav">
-          <span class="step-counter">1 of 6</span>
-          <button type="button" class="btn-next" id="next1" disabled>Next →</button>
-        </div>
-      </div>
-
-      <!-- STEP 2 -->
-      <div class="step" id="step2">
-        <div class="step-label">Step 2 of 6</div>
-        <div class="step-title">What type of insurance plan covers most of the disputed claims?</div>
-        <div class="option-grid">
-          <button type="button" class="option-btn" data-field="plan_type" data-value="Fully insured NY plan (BCBS, Aetna, etc.)"><span class="opt-icon">📋</span><span class="opt-label">Fully Insured NY Plan</span><span class="opt-sub">BCBS, Aetna, UHC, Cigna, etc.</span></button>
-          <button type="button" class="option-btn" data-field="plan_type" data-value="Self-funded employer plan (ERISA)"><span class="opt-icon">🏢</span><span class="opt-label">Self-Funded Employer Plan</span><span class="opt-sub">Large employer pays claims directly</span></button>
-          <button type="button" class="option-btn" data-field="plan_type" data-value="Mix of both"><span class="opt-icon">⚖️</span><span class="opt-label">Mix of Both</span><span class="opt-sub">Different patients, different plans</span></button>
-          <button type="button" class="option-btn" data-field="plan_type" data-value="Not sure"><span class="opt-icon">❓</span><span class="opt-label">Not Sure</span><span class="opt-sub">We can help identify this</span></button>
-        </div>
-        <div class="step-nav">
-          <button type="button" class="btn-back" id="back2">← Back</button>
-          <span class="step-counter">2 of 6</span>
-          <button type="button" class="btn-next" id="next2" disabled>Next →</button>
-        </div>
-      </div>
-
-      <!-- STEP 3 -->
-      <div class="step" id="step3">
-        <div class="step-label">Step 3 of 6</div>
-        <div class="step-title">How old are the underpaid claims you want to dispute?</div>
-        <div class="option-grid">
-          <button type="button" class="option-btn" data-field="claim_age" data-value="Last 6 months"><span class="opt-label">Last 6 months</span><span class="opt-sub">Recent underpayments</span></button>
-          <button type="button" class="option-btn" data-field="claim_age" data-value="6–18 months"><span class="opt-label">6–18 months</span><span class="opt-sub">Still within federal + NY windows</span></button>
-          <button type="button" class="option-btn" data-field="claim_age" data-value="18 months – 3 years"><span class="opt-label">18 months – 3 years</span><span class="opt-sub">NY state IDR window may apply</span></button>
-          <button type="button" class="option-btn" data-field="claim_age" data-value="Mix / Ongoing"><span class="opt-label">Mix / Ongoing</span><span class="opt-sub">Range of claim dates</span></button>
-        </div>
-        <div class="step-nav">
-          <button type="button" class="btn-back" id="back3">← Back</button>
-          <span class="step-counter">3 of 6</span>
-          <button type="button" class="btn-next" id="next3" disabled>Next →</button>
-        </div>
-      </div>
-
-      <!-- STEP 4 -->
-      <div class="step" id="step4">
-        <div class="step-label">Step 4 of 6</div>
-        <div class="step-title">Have you previously appealed any of these underpayments?</div>
-        <div class="option-grid" style="grid-template-columns:1fr 1fr;">
-          <button type="button" class="option-btn" data-field="prior_appeal" data-value="No — never disputed"><span class="opt-icon">❌</span><span class="opt-label">No — Never Disputed</span><span class="opt-sub">Accepted insurer's payment</span></button>
-          <button type="button" class="option-btn" data-field="prior_appeal" data-value="Yes — internal appeal only"><span class="opt-icon">📝</span><span class="opt-label">Internal Appeal Only</span><span class="opt-sub">Filed appeal with insurer</span></button>
-          <button type="button" class="option-btn" data-field="prior_appeal" data-value="Yes — attempted IDR"><span class="opt-icon">⚖️</span><span class="opt-label">Attempted IDR</span><span class="opt-sub">Filed but not resolved favorably</span></button>
-          <button type="button" class="option-btn" data-field="prior_appeal" data-value="In process now"><span class="opt-icon">🔄</span><span class="opt-label">In Process Now</span><span class="opt-sub">Need help managing existing dispute</span></button>
-        </div>
-        <div class="step-nav">
-          <button type="button" class="btn-back" id="back4">← Back</button>
-          <span class="step-counter">4 of 6</span>
-          <button type="button" class="btn-next" id="next4" disabled>Next →</button>
-        </div>
-      </div>
-
-      <!-- STEP 5 -->
-      <div class="step" id="step5">
-        <div class="step-label">Step 5 of 6</div>
-        <div class="step-title">Approximately what is the total amount underpaid across the claims you want to dispute?</div>
-        <div class="option-grid" style="grid-template-columns:1fr 1fr;">
-          <button type="button" class="option-btn" data-field="claim_value" data-value="Under $10,000"><span class="opt-label">Under $10,000</span></button>
-          <button type="button" class="option-btn" data-field="claim_value" data-value="$10,000 – $50,000"><span class="opt-label">$10,000 – $50,000</span></button>
-          <button type="button" class="option-btn" data-field="claim_value" data-value="$50,000 – $250,000"><span class="opt-label">$50,000 – $250,000</span></button>
-          <button type="button" class="option-btn" data-field="claim_value" data-value="Over $250,000"><span class="opt-label">Over $250,000</span></button>
-        </div>
-        <div class="step-nav">
-          <button type="button" class="btn-back" id="back5">← Back</button>
-          <span class="step-counter">5 of 6</span>
-          <button type="button" class="btn-next" id="next5" disabled>Next →</button>
-        </div>
-      </div>
-
-      <!-- STEP 6 -->
-      <div class="step" id="step6">
-        <div class="step-label">Step 6 of 6 — Your Contact Information</div>
-        <div class="step-title">Almost done — how should we reach you?</div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="eval_name">Your Name *</label>
-            <input type="text" id="eval_name" name="name" placeholder="Dr. Jane Smith" required>
-          </div>
-          <div class="form-group">
-            <label for="eval_practice">Practice / Organization *</label>
-            <input type="text" id="eval_practice" name="practice_name" placeholder="Smith Surgical Group" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="eval_phone">Phone *</label>
-            <input type="tel" id="eval_phone" name="phone" placeholder="(212) 555-0000" required>
-          </div>
-          <div class="form-group">
-            <label for="eval_email">Email *</label>
-            <input type="email" id="eval_email" name="email" placeholder="billing@practice.com" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="eval_payer">Primary Payer(s) in Dispute</label>
-          <input type="text" id="eval_payer" name="payer_name" placeholder="e.g., UnitedHealthcare, Aetna, BCBS">
-        </div>
-        <div class="form-group">
-          <label for="eval_notes">Additional Details (optional)</label>
-          <textarea id="eval_notes" name="description" placeholder="Briefly describe the types of services, the pattern of underpayment, or any context that would help us prepare for our call..."></textarea>
-        </div>
-        <div class="form-group">
-          <label for="eval_calltime">Best Time to Call</label>
-          <select id="eval_calltime" name="best_call_time">
-            <option value="">Select a preference</option>
-            <option>Morning (9am – 12pm)</option>
-            <option>Afternoon (12pm – 4pm)</option>
-            <option>Evening (4pm – 6pm)</option>
-          </select>
-        </div>
-        <div class="step-nav">
-          <button type="button" class="btn-back" id="back6">← Back</button>
-          
-        <!-- Spam protection — Turnstile + honeypot (added by patch_forms.py) -->
-        <div data-spam-protection="turnstile-honeypot-v1" style="margin:12px 0;">
-          <div class="cf-turnstile" data-sitekey="0x4AAAAAADBR42vclhUAd59y" data-theme="auto"></div>
+  <div class="form-group"><label for="e_time">Best time to call</label><select id="e_time" name="best_call_time" required><option value="">Select…</option><option value="morning">Morning</option><option value="midday">Midday</option><option value="afternoon">Afternoon</option><option value="any">Any time</option></select></div>
+  <div class="form-group"><label for="e_desc">Anything else (optional, no patient information)</label><textarea id="e_desc" name="description"></textarea></div>
+  <div data-spam-protection="turnstile-honeypot-v1" style="margin:12px 0;">
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAADBR42vclhUAd59y" data-theme="light"></div>
         </div>
         <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;" tabindex="-1">
           <label for="company_website_hp">Leave this field empty (anti-spam)</label>
           <input type="text" name="company_website" id="company_website_hp" tabindex="-1" autocomplete="off" value="">
         </div>
-        <button type="submit" class="btn-next" id="submitBtn">Submit Evaluation →</button>
-        </div>
-      </div>
-
-      <input type="hidden" name="claim_value" id="hid_claim_value" value="">
-    </form>
-  </div>
-
-  <p style="font-size:0.72rem;color:var(--gray-mid);text-align:center;margin-top:16px;line-height:1.5;">Attorney advertising. Submission of this form does not create an attorney-client relationship. Madison Law Firm PLLC · 579 Fifth Avenue, 2nd Floor, New York, NY 10017</p>
-</div>
-
-<footer>
-  <div class="footer-bottom">
-    <p class="footer-legal">Madison Law Firm PLLC · 579 Fifth Avenue, 2nd Floor, New York, NY 10017 · inquiries@madisonlawfirm.com. Attorney advertising. Prior results do not guarantee similar outcomes.</p>
-    <p class="footer-copy">© 2026 Madison Law Firm PLLC</p>
-  </div>
-</footer>
-
-<script>
-document.getElementById('hamburger').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open');});
-
-let currentStep=1;
-const totalSteps=6;
-const selections={specialty:'',plan_type:'',claim_age:'',prior_appeal:'',claim_value:''};
-
-function updateDots(){
-  for(let i=1;i<=totalSteps;i++){
-    const dot=document.getElementById('dot'+i);
-    if(dot){dot.classList.toggle('done',i<=currentStep);}
-  }
-}
-
-function goToStep(n){
-  document.getElementById('step'+currentStep).classList.remove('active');
-  currentStep=n;
-  document.getElementById('step'+currentStep).classList.add('active');
-  updateDots();
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-// Option buttons
-document.querySelectorAll('.option-btn').forEach(btn=>{
-  btn.addEventListener('click',function(){
-    const field=this.dataset.field;
-    const val=this.dataset.value;
-    // Deselect others in same group
-    const siblings=document.querySelectorAll('#step'+currentStep+' .option-btn[data-field="'+field+'"]');
-    siblings.forEach(s=>s.classList.remove('selected'));
-    this.classList.add('selected');
-    selections[field]=val;
-    // Enable next
-    const nextBtn=document.getElementById('next'+currentStep);
-    if(nextBtn)nextBtn.disabled=false;
-    // Set hidden fields
-    if(field==='specialty')document.getElementById('hid_specialty').value=val;
-    if(field==='plan_type')document.getElementById('hid_plan_type').value=val;
-    if(field==='claim_age')document.getElementById('hid_claim_age').value=val;
-    if(field==='prior_appeal')document.getElementById('hid_prior_appeal').value=val;
-    if(field==='claim_value')document.getElementById('hid_claim_value').value=val;
-    // Auto advance steps 1-5
-    if(currentStep<6){setTimeout(()=>{goToStep(currentStep+1);},300);}
-  });
-});
-
-// Manual next buttons (fallback)
-for(let i=1;i<=5;i++){
-  const btn=document.getElementById('next'+i);
-  if(btn){btn.addEventListener('click',function(){if(!this.disabled)goToStep(currentStep+1);});}
-}
-// Back buttons
-['back2','back3','back4','back5','back6'].forEach((id,idx)=>{
-  const btn=document.getElementById(id);
-  if(btn){btn.addEventListener('click',function(){goToStep(currentStep-1);});}
-});
-
-// Form submit
+  <button type="submit" class="form-submit">Request my claims review</button>
+  <p class="form-note">Confidential. Submitting this form does not create an attorney-client relationship. We respond within one business day.</p>
+</form></div></div><script>
 document.getElementById('evalForm').addEventListener('submit',async function(e){
-  e.preventDefault();
-  const btn=document.getElementById('submitBtn');
-  btn.textContent='Submitting...';btn.disabled=true;
-  const data=new FormData(this);
-  try{
-    await fetch(this.action,{method:'POST',body:data});
-  }catch(err){}
-  window.location.href='/thank-you.html?type=evaluation';
+  e.preventDefault();var btn=this.querySelector('.form-submit');btn.textContent='Sending…';btn.disabled=true;
+  try{await fetch(this.action,{method:'POST',body:new FormData(this)});}catch(err){}
+  window.location.href='/thank-you?type=evaluation';
 });
-
-updateDots();
+</script></div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div class="f-top">
+    <div class="f-brand"><span class="oon-logo light"><span class="oon-brand">OutOfNetwork<span class="oon-ny">NY</span></span></span><span class="f-firm">Madison Law Firm PLLC</span>
+      <p>579 Fifth Avenue, 2nd Floor<br>New York, NY 10017<br><a href="tel:+12123003191" style="color:inherit">(212) 300-3191</a></p></div>
+    <div class="f-col"><h4>The Process</h4><ul><li><a href="/how-it-works#new-york">New York IDR</a></li><li><a href="/how-it-works#federal">Federal No Surprises Act IDR</a></li><li><a href="/how-it-works#costs">Costs and fees</a></li><li><a href="/how-it-works#medicare">Medicare and Medicaid</a></li><li><a href="/how-it-works#awards">Collecting an award</a></li></ul></div>
+    <div class="f-col"><h4>Resources</h4><ul><li><a href="/faq">FAQ</a></li><li><a href="/free-guide">Free guide</a></li><li><a href="/case-types">Case types</a></li></ul></div>
+    <div class="f-col"><h4>Work With Us</h4><ul><li><a href="/for-providers">For providers</a></li><li><a href="/case-evaluator">Free claims review</a></li><li><a href="/contact">Contact</a></li></ul></div>
+    <div class="f-col"><h4>The Firm</h4><ul><li><a href="https://www.madisonlawfirm.com/" target="_blank" rel="noopener">MadisonLawFirm.com</a></li><li><a href="https://www.madisonlawfirm.com/surprise-billing-arbitration" target="_blank" rel="noopener">Surprise billing practice</a></li><li><a href="https://www.madisonlawfirm.com/attorneys" target="_blank" rel="noopener">Attorneys</a></li></ul></div>
+  </div>
+  <div class="f-legal"><span>Madison Law Firm PLLC &middot; &copy; 2026. Attorney Advertising. Prior results do not guarantee a similar outcome.</span><a href="#main-content">Back to top &uarr;</a></div>
+  <div class="footer-disc">Attorney Advertising. OutOfNetworkNY is a website of Madison Law Firm PLLC, 579 Fifth Avenue, 2nd Floor, New York, NY 10017, which is responsible for its content. Madison Law Firm PLLC is licensed to practice law in the State of New York. This site is for general information only, is current as of November 5, 2026, and is not legal advice. Laws, fees, and deadlines change. No attorney-client relationship is formed by using this site or submitting an inquiry.</div>
+</div></footer>
+<a id="ada-skip-link" href="#main-content">Skip to main content</a>
+<div id="ada-reading-guide-line" role="presentation" aria-hidden="true"></div>
+<div id="ada-toolbar-wrap" role="complementary" aria-label="Accessibility Tools">
+  <div id="ada-panel" aria-hidden="true" role="dialog" aria-label="Accessibility Options">
+    <div class="ada-panel-inner">
+      <div class="ada-title"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zm-1 5h2l2 5-2 1v5h-2v-5l-2-1 2-5z"></path></svg>Accessibility</div>
+      <div class="ada-section"><div class="ada-section-label">Text Size</div><div class="ada-btn-row">
+        <button class="ada-btn" onclick="adaSetFontSize(90)">A&minus;</button>
+        <button class="ada-btn active" id="ada-text-md" onclick="adaSetFontSize(100)">A</button>
+        <button class="ada-btn" onclick="adaSetFontSize(115)">A+</button>
+        <button class="ada-btn" onclick="adaSetFontSize(130)">A++</button>
+      </div></div>
+      <div class="ada-section"><div class="ada-section-label">Display</div>
+        <button class="ada-btn-full" id="ada-contrast" onclick="adaToggleClass('ada-high-contrast','ada-contrast')">High Contrast</button>
+        <button class="ada-btn-full" id="ada-invert" onclick="adaToggleClass('ada-inverted','ada-invert')">Invert Colors</button>
+        <button class="ada-btn-full" id="ada-dyslexia-btn" onclick="adaToggleClass('ada-dyslexia','ada-dyslexia-btn')">Dyslexia Font</button>
+        <button class="ada-btn-full" id="ada-links" onclick="adaToggleClass('ada-highlight-links','ada-links')">Highlight Links</button>
+        <button class="ada-btn-full" id="ada-anim" onclick="adaToggleClass('ada-pause-anim','ada-anim')">&#9646; Pause Animations</button>
+        <button class="ada-btn-full" id="ada-focus" onclick="adaToggleClass('ada-focus-visible','ada-focus')">Focus Indicator</button>
+        <button class="ada-btn-full" id="ada-reading-guide-btn" onclick="adaToggleReadingGuide()">Reading Guide</button>
+      </div>
+      <div class="ada-section"><div class="ada-section-label">Spacing</div>
+        <button class="ada-btn-full" id="ada-letter" onclick="adaToggleClass('ada-letter-space','ada-letter')">AB Letter Space</button>
+        <button class="ada-btn-full" id="ada-line" onclick="adaToggleClass('ada-line-height','ada-line')">Line Height</button>
+      </div>
+      <button class="ada-reset" onclick="adaReset()">&#8635; Reset All</button>
+    </div>
+  </div>
+  <button id="ada-toggle-btn" onclick="adaTogglePanel()" aria-expanded="false" aria-controls="ada-panel" aria-label="Open accessibility tools">
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="4" r="2"></circle><path d="M12 8c-3 0-5 2-5 5v1h2v5h6v-5h2v-1c0-3-2-5-5-5z"></path></svg>
+    <span>Access</span>
+  </button>
+</div>
+<script>
+function adaTogglePanel(){const p=document.getElementById('ada-panel'),b=document.getElementById('ada-toggle-btn'),o=p.classList.toggle('open');p.setAttribute('aria-hidden',String(!o));b.setAttribute('aria-expanded',String(o));}
+function adaSetFontSize(p){document.documentElement.style.fontSize=p+'%';}
+function adaToggleClass(bc,bi){const a=document.body.classList.toggle(bc);const b=document.getElementById(bi);if(b){b.classList.toggle('active',a);b.setAttribute('aria-pressed',String(a));}}
+function adaToggleReadingGuide(){const a=document.body.classList.toggle('ada-reading-guide');const b=document.getElementById('ada-reading-guide-btn');if(b){b.classList.toggle('active',a);}if(a)document.addEventListener('mousemove',adaMoveGuide);else document.removeEventListener('mousemove',adaMoveGuide);}
+function adaMoveGuide(e){const l=document.getElementById('ada-reading-guide-line');if(l)l.style.top=(e.clientY-14)+'px';}
+function adaReset(){document.documentElement.style.fontSize='';['ada-high-contrast','ada-inverted','ada-dyslexia','ada-highlight-links','ada-pause-anim','ada-focus-visible','ada-reading-guide','ada-letter-space','ada-line-height'].forEach(c=>document.body.classList.remove(c));document.removeEventListener('mousemove',adaMoveGuide);document.querySelectorAll('.ada-btn-full.active,.ada-btn.active').forEach(e=>e.classList.remove('active'));document.documentElement.style.fontSize='';}
+</script>
+<script>
+(function(){var b=document.querySelector('.nav-toggle'),n=document.getElementById('site-nav');if(!b||!n)return;
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o));});})();
 </script>
 </body>
 </html>
